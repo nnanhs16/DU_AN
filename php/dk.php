@@ -15,7 +15,7 @@
       if (isset($_POST['btnDK'])) 
       {  
       	  $user = $_POST['txtName'] ;
-      	  $pass = password_hash($_POST['txtPass'], PASSWORD_DEFAULT );
+      	  $pass = $_POST['txtPass'];
       	  $email = $_POST['txtEmail'] ; 
       	  require_once("ketnoi.php");
       	  $sql="insert into user(username, password, email)
