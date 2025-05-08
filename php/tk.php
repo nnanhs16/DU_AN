@@ -22,7 +22,7 @@
                 });
         </script>
         <?php
-	if(isset($_POST['btnLogin']))
+	if(isset($_POST['btnTK']))
 	{
 		$user = $_POST['txtName'] ;
         $pass = $_POST['txtPass'];
@@ -58,9 +58,8 @@
 				<input type="text" name="" placeholder="Tên đăng nhập">
 				<label>Mật khẩu</label>
 				<input type="password" name="" placeholder="Nhập mật khẩu">
-				<input type="submit" value="Đăng nhập" name="">
+				<input type="submit" value="Đăng nhập" name="btnTK">
 			</form>
-            <p>Chưa có tài khoản? <a href="dangky.html">Đăng ký</a></p>
 		</div>
 	</div>
 </body>

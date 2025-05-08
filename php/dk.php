@@ -12,7 +12,7 @@
 </head>
 <body>
 <?php
-      if (isset($_POST['btnRegister'])) 
+      if (isset($_POST['btnDK'])) 
       {  
       	  $user = $_POST['txtName'] ;
       	  $pass = password_hash($_POST['txtPass'], PASSWORD_DEFAULT );
@@ -43,7 +43,7 @@
 				<input type="password" name="" placeholder="Nhập mật khẩu">
                 <label>Nhập lại mật khẩu</label>
 				<input type="password" name="" placeholder="Nhập lại mật khẩu">
-				<input type="submit" name="btnRegister" value="Đăng ký">
+				<input type="submit" name="btnDK" value="Đăng ký">
 			</form>
 		</div>
 	</div>
