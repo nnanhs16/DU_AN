@@ -60,6 +60,7 @@
 				<input type="password" id="txtPass" name="txtPass" placeholder="Nhập mật khẩu">
 				<input type="submit" value="Đăng nhập" name="btnTK"> 
 			</form>
+            <p>Chưa có tài khoản? <a href="dk.php">Đăng ký</a></p>
 		</div>
 	</div>
 </body>
