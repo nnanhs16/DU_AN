@@ -52,13 +52,13 @@
 ?>	
     <div class="Container">
 		<div class="from-contain">
-			<h1 >ĐĂNG NHẬP KHÁCH HÀNG</h1>
+			<h2 >Thành viên đăng nhập</h2>
 			<form method="post">
 				<label for="txtName">Tên khách hàng</label>
 				<input type="text" id="txtName" name="txtName"  autocomplete="off">
 				<label for="txtPass">Mật khẩu</label>
 				<input type="password" id="txtPass" name="txtPass" placeholder="Nhập mật khẩu">
-				<input type="submit" value="Đăng nhập" name="btnTK">
+				<input type="submit" value="Đăng nhập" name="btnTK"> 
 			</form>
 		</div>
 	</div>
