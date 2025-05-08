@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/admin.css">
+
+</head>
+<body>
+	<div id="menu"></div> <!-- Chỗ này sẽ hiện menu -->
+    
+	<!-- Các nội dung khác của trang -->
+	<script>
+		fetch('menu.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('menu').innerHTML = data;
+			});
+	</script>
+
+    <div class="Container">
+		<div class="from-contain">
+			<h2 >Chào mừng tới trang của Admin</h2>
+			<form>
+				<label for="txtname" id="id101">Truy cập nhanh</label>
+				<input type="submit" value="Trang chủ" name="">
+                <input type="submit" value="Sản phẩm" name="">
+                <input type="submit" value="Đơn đặt" name="">
+                <input type="submit" value="Tin nhắn" name="">
+                <input type="submit" value="Quản lý TK" name="">
+			</form>
+            
+		</div>
+	</div>
+</body>
+</html>

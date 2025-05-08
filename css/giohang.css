@@ -1,0 +1,94 @@
+/* General container styling */
+.gio-hang-page .container { /* Thêm .gio-hang-page */
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Heading */
+.gio-hang-page h1 { /* Thêm .gio-hang-page */
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Table styling */
+.gio-hang-page table { /* Thêm .gio-hang-page */
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.gio-hang-page table, .gio-hang-page th, .gio-hang-page td { /* Thêm .gio-hang-page */
+    border: 1px solid #ddd;
+}
+
+.gio-hang-page thead { /* Thêm .gio-hang-page */
+    background-color: #f8f8f8;
+}
+
+.gio-hang-page th, .gio-hang-page td { /* Thêm .gio-hang-page */
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style for product image in table */
+.gio-hang-page table img { /* Thêm .gio-hang-page */
+    vertical-align: middle;
+    margin-left: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+/* Input field styling */
+.gio-hang-page table input[type="number"] { /* Thêm .gio-hang-page */
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button styling */
+.gio-hang-page button, .gio-hang-page a button { /* Thêm .gio-hang-page */
+    background-color: #00416A;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.gio-hang-page button:hover, .gio-hang-page a button:hover { /* Thêm .gio-hang-page */
+    background-color: #00416A;
+}
+
+/* Style for "Tổng tiền" row */
+.gio-hang-page tfoot tr td { /* Thêm .gio-hang-page */
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Empty cart message */
+.gio-hang-page p { /* Thêm .gio-hang-page */
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-top: 20px;
+}
+
+.gio-hang-page p a { /* Thêm .gio-hang-page */
+    color: #00416A;
+    text-decoration: none;
+}
+
+.gio-hang-page p a:hover { /* Thêm .gio-hang-page */
+    text-decoration: underline;
+}
+

@@ -1,0 +1,12 @@
+:root{
+    --font: 'Inria serif', serif;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 120px;
+}
+
+a{
+    text-decoration: none;
+}
+

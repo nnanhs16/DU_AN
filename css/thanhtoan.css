@@ -1,0 +1,100 @@
+/* Style cho wrapper (bao ngoài) */
+.thanh-toan-wrapper {
+    display: flex;       /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    width: 100%;           /* Chiếm toàn bộ chiều rộng */
+    /* background-color: #f0f0f0;  Để debug, bạn có thể thêm màu nền để thấy rõ */
+}
+
+/* Style cho container (nội dung) */
+.thanh-toan-content {
+    width: 60%;         /* Chiều rộng mong muốn */
+    max-width: 800px;   /* Chiều rộng tối đa (tùy chọn) */
+    margin: 20px 0;    /* Margin trên dưới */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: #fff;  Để debug, bạn có thể thêm màu nền */
+}
+
+/* Style cho tiêu đề trang */
+.thanh-toan-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Style cho tiêu đề form */
+.form-title {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* Style cho khung thông tin */
+.khung-thong-tin {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Style cho các phần tử form */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #777;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Style cho nút đặt hàng */
+.dat-hang-btn {
+    background-color: #00416A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dat-hang-btn:hover {
+    background-color: #002d4d;
+}
+
+/* Style cho phần giỏ hàng (nếu có) */
+.thong-tin-gio-hang {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+/* Các style khác cho bảng giỏ hàng, ... */
+

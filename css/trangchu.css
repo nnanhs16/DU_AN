@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.anhlon{
+    width: 100%;
+    max-width: 100%;
+    background: white;
+    margin: 0;
+    padding: 0;
+    
+}
+.header {
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+    top: 0;
+    width: 100vw; /* Sử dụng vw để chắc chắn khớp toàn bộ màn hình */
+    margin: 0;
+    padding: 0;
+    border-radius: 0; /* Đảm bảo không có bo góc */
+}
+
+
+.anhnen {
+   
+    width: 100vw;
+    height: 100vh;
+}
+
+.anhnen img {
+    width: 100vw; /* Chiều rộng toàn bộ màn hình */
+    height: 100vh; /* Chiều cao toàn màn hình */
+    object-fit: cover; /* Giúp ảnh phủ kín nhưng không bị méo */
+    display: block;
+}
+
+
+
+
+.section-two .container3 .tieude{
+    padding-top: 150px;
+    color: #003d79;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px; 
+    text-align: center;
+}
+.inner-content a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Đảm bảo ảnh không bị cắt */
+}
+.inner-image {
+    display: flex;
+    justify-content: center; /* Căn giữa hình ảnh theo chiều ngang */
+    padding: 50px;
+    margin: 0 70px;
+    text-align: center;
+    
+}
+
+.inner-image img {
+    width: 400px; /* Đặt kích thước ảnh để vừa hàng ngang */
+    height: 400px; /* Đảm bảo tỷ lệ không bị méo */
+}
+
+.footer {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc nếu footer có chiều cao */
+}
+
+.footer .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.footer .logo img {
+    height: 70px; /* Giảm kích thước */
+    width: auto; /* Giữ tỷ lệ ảnh */
+}
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: #858990;
+    border: none;
+    margin: 20px auto;
+}
+.end .from{
+    color: #003d79;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+}
+.end .social-icons {
+        display: flex;
+        justify-content: center; /* Căn giữa icon */
+        gap: 15px; /* Khoảng cách giữa icon */
+}
+
+.end .social-icons img {
+    height: 40px; /* Chiều cao nhỏ hơn */
+    width: 40px; /* Giữ nguyên tỷ lệ ảnh */
+    display: block;
+    margin: auto; /* Căn giữa logo */
+    justify-content: center; /* Căn giữa icon */
+}
+
