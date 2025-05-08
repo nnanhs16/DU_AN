@@ -33,9 +33,9 @@
 ?>	
     <div class="Container">
 		<div class="from-contain">
-			<h1>ĐĂNG KÝ KHÁCH HÀNG</h1>
+			<h1>ĐĂNG KÝ THÀNH VIÊN</h1>
 			<form method="post">
-				<label for="txtName">Tên khách hàng</label>
+				<label for="txtName">Tên Đăng Ký</label>
 				<input type="text" name="txtName" placeholder="vd:Lê Hải Linh">
                 <label for="txtEmail">Email</label>
 				<input type="email" id="txtEmail" name="txtEmail" placeholder="vd: abc@gmail.com">
