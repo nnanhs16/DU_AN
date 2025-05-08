@@ -25,7 +25,7 @@
 	if(isset($_POST['btnTK']))
 	{
 		$user = $_POST['txtName'] ;
-        $pass = $_POST['txtPass'];
+        $pass = md5($_POST['txtPass']);
        	require_once("ketnoi.php");
        	$sql = "select*from user where username = '$user'";
        	$kq = mysqli_query($conn,$sql);
@@ -54,10 +54,10 @@
 		<div class="from-contain">
 			<h1 >ĐĂNG NHẬP KHÁCH HÀNG</h1>
 			<form method="post">
-				<label for="txtname">Tên khách hàng</label>
-				<input type="text" name="" placeholder="Tên đăng nhập">
-				<label>Mật khẩu</label>
-				<input type="password" name="" placeholder="Nhập mật khẩu">
+				<label for="txtName">Tên khách hàng</label>
+				<input type="text" id="txtName" name="txtName"  autocomplete="off">
+				<label for="txtPass">Mật khẩu</label>
+				<input type="password" id="txtPass" name="txtPass" placeholder="Nhập mật khẩu">
 				<input type="submit" value="Đăng nhập" name="btnTK">
 			</form>
 		</div>

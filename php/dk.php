@@ -15,7 +15,7 @@
       if (isset($_POST['btnDK'])) 
       {  
       	  $user = $_POST['txtName'] ;
-      	  $pass = $_POST['txtPass'];
+      	  $pass = md5($_POST['txtPass']);
       	  $email = $_POST['txtEmail'] ; 
       	  require_once("ketnoi.php");
       	  $sql="insert into user(username, password, email)
@@ -35,11 +35,11 @@
 		<div class="from-contain">
 			<h1>ĐĂNG KÝ KHÁCH HÀNG</h1>
 			<form method="post">
-				<label for="txtname">Tên khách hàng</label>
+				<label for="txtName">Tên khách hàng</label>
 				<input type="text" name="txtName" placeholder="vd:Lê Hải Linh">
                 <label for="txtEmail">Email</label>
 				<input type="email" id="txtEmail" name="txtEmail" placeholder="vd: abc@gmail.com">
-				<label>Mật khẩu</label>
+				<label for="txtPass">Mật khẩu</label>
 				<input type="password" name="" placeholder="Nhập mật khẩu">
                 <label>Nhập lại mật khẩu</label>
 				<input type="password" name="" placeholder="Nhập lại mật khẩu">
