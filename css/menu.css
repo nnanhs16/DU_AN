@@ -77,3 +77,28 @@
     display: flex;
     justify-content: center;
 }
+.cuon {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    background: rgb(162, 195, 238);
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+.cuon li a {
+    width: 150px;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px dotted grey;
+}
+.cuon li a:hover {
+    background: transparent;
+}
+
+.chucnang ul li :hover .cuon {
+    display: block;
+}
+
