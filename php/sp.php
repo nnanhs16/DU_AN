@@ -10,7 +10,7 @@
     <?php include('../video/menu.html'); ?>
 
     <?php
-    include(__DIR__ . "/connect.php");
+    include(__DIR__ . "/ketnoi.php");
     if (!$conn) {
         die("Lỗi kết nối MySQL: " . mysqli_connect_error());
     }
