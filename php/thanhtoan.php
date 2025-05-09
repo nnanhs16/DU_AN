@@ -1,49 +1,83 @@
 <?php
 session_start();
+require_once("ketnoi.php");
+
+
+if (!isset($_SESSION['khachhang_id']) || !isset($_SESSION['giohang']) || empty($_SESSION['giohang'])) {
+    echo "Thông tin không đầy đủ. Vui lòng quay lại giỏ hàng.";
+    exit;
+}
+
+
+$khachang_id = $_SESSION['khachhang_id'];
+$query_kh = "SELECT * FROM khachhang WHERE id = $khachhang_id";
+$result_kh = mysqli_query($conn, $query_kh);
+$khachhang = mysqli_fetch_assoc($result_kh);
+
+if (!$khachhang) {
+    header("location:nhaptt.php");
+    exit;
+}
+
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnXacNhan'])) {
+    $fullname = $khachhang['ten'];
+    $sdt = $khachhang['sdt'];
+    $email = $khachhang['email'];
+    $address = $khachhang['dc']; 
+    $pay = $khachhang['pttt'];
+    $day = date('Y-m-d');
+
+    foreach ($_SESSION['giohang'] as $id => $stock) {
+        $result = mysqli_query($conn,"SELECT * FROM products WHERE id = $id");
+        if ($row = mysqli_fetch_assoc($result)) {
+            $product = $row['product'];
+            $price = $row['price'];
+
+            
+            $sql_insert = "INSERT INTO information (fullname, product, sdt, stock, day, pay, email, address, price)
+                           VALUES ('$fullname', '$procduct', '$sdt', $stock, '$day', '$pay', '$email', '$address', $price)";
+            mysqli_query($conn,$sql_insert);
+        }
+    }
+
+    unset($_SESSION['giohang']);
+
+    echo "<script>alert('Đơn hàng đã được đặt thành công!'); window.location.href='menu.php';</script>";
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>Thanh toán</title>
-    <link rel="stylesheet" type="text/css" href="../css/thanhtoan.css">
 </head>
 <body>
-<?php include('../video/menu.html'); ?>
+    <h2>Thông tin khách hàng</h2>
+    <p>Họ tên: <?= htmlspecialchars($khachhang['name']) ?></p>
+    <p>Điện thoại: <?= htmlspecialchars($khachhang['sdt']) ?></p>
+    <p>Email: <?= htmlspecialchars($khachhang['email']) ?></p>
+    <p>Địa chỉ: <?= htmlspecialchars($khachhang['Address']) ?>, <?= htmlspecialchars($khachhang['tt']) ?>, <?= htmlspecialchars($khachhang['quocgia']) ?>, <?= htmlspecialchars($khachhang['mbc']) ?></p>
+    <p>Phương thức thanh toán: <?= htmlspecialchars($khachhang['pttt']) ?></p>
 
-    <div class="thanh-toan-wrapper">  <div class="container thanh-toan-content"> <h1 class="thanh-toan-title">Thanh toán đơn hàng</h1> <?php
-            if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
-                // Hiển thị thông tin giỏ hàng (tùy bạn muốn giữ hay bỏ)
-                echo "<div class='thong-tin-gio-hang'>"; 
-                echo "";
-                echo "</div>";
+    <h2>Chi tiết đơn hàng</h2>
+    <?php
+    $tong = 0;
+    foreach ($_SESSION['giohang'] as $id => $stock) {
+        $result = $conn->query("SELECT * FROM products WHERE id = $id");
+        if ($row = mysqli_fetch_assoc($result_kh)) {
+            $thanhtien = $row['price'] * $stock;
+            $tong += $thanhtien;
+            echo "<p>" . htmlspecialchars($row['product']) . " - Số lượng: $soluong - Thành tiền: " . number_format($thanhtien, 0, ',', '.') . " Đ</p>";
+        }
+    }
+    echo "<h3>Tổng cộng: " . number_format($tong, 0, ',', '.') . " Đ</h3>";
+    ?>
 
-                echo "<div class='thong-tin-giao-hang khung-thong-tin'>";
-                echo "<h2 class='form-title'>Thông tin giao hàng</h2>";  echo "<form action='xulythanhtoan.php' method='post'>";
-                echo "<div class='form-group'>";
-                echo "<label for='name'>Họ và tên:</label><input type='text' id='name' name='name' required></div>";
-                echo "<div class='form-group'>";
-                echo "<label for='address'>Địa chỉ giao hàng:</label><textarea id='address' name='address' rows='4' required></textarea></div>";
-                echo "<div class='form-group'>";
-                echo "<label for='phone'>Số điện thoại:</label><input type='tel' id='phone' name='phone' required></div>";
-                echo "</div>";
-
-                echo "<div class='phuong-thuc-thanh-toan khung-thong-tin'>";
-                echo "<h2 class='form-title'>Phương thức thanh toán</h2>";  echo "<div class='form-group'>";
-                echo "<input type='radio' id='cash' name='payment_method' value='cash' checked>";
-                echo "<label for='cash'>Thanh toán khi nhận hàng</label></div>";
-                // Thêm các phương thức thanh toán khác nếu cần
-                echo "</div>";
-
-                echo "<br><button type='submit' class='dat-hang-btn'>Đặt hàng</button>";  echo "</form>";
-            } else {
-                echo "<p>Giỏ hàng của bạn đang trống. Vui lòng thêm sản phẩm trước khi thanh toán.</p>";
-                echo "<p><a href='../video/sp.php'>Tiếp tục mua hàng</a></p>";
-            }
-            ?>
-        </div>
-    </div>
+    <form method="post">
+        <button type="submit" name="btnXacNhan">Xác nhận thanh toán</button>
+    </form>
 </body>
 </html>

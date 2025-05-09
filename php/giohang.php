@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <li><a href="truyenthong.php">Truyền Thông</a></li>
                             <li><a href="sp.php">Cửa Hàng</a></li>
                             <li><a href="giohang.php">Giỏ Hàng</a></li>
-                            <li><a href="tk.php">Tài Khoản</a></li>
+                            <li><a href="dangxuat.php">Đăng Xuất</a></li>
                         </ul>
                     </div>
                 </div>
@@ -104,8 +104,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo "<p class='tongcong'>Tổng cộng: " . number_format($tong, 0, ',', '.') . " đ</p>";
     ?>
 
-    <form method="post" action="xulythanhtoan.php" class="xulythanhtoan">
-    <input class="xyly-thanhtoan" type="submit" name="btnThanhToan" value="Tiến hành Thanh Toán">
-</form>
+    <form action="thanhtoan.php" method="post" class="xulythanhtoan">
+    <input class="xyly-thanhtoan" type="submit" name="btnXulythanhtoan" value="Tiến hành Thanh Toán">
+    </form>
 </body>
 </html>

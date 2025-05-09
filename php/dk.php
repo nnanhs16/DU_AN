@@ -22,7 +22,9 @@
       	  					values('$user','$pass','$email')";
       	  $kq = mysqli_query($conn,$sql);
       	  if ($kq) {
-			echo "<script>alert('Đăng ký thành công! Vui lòng đăng nhập.');</script>";
+			echo "<script>alert('Đăng ký thành công! Vui lòng đăng nhập.');
+					window.location.href = 'tk.php';
+				</script>";
       	  }
       	  else
       	  {
