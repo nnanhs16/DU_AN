@@ -82,13 +82,12 @@ if (isset($_POST['btnCapNhat'])) {
       font-size: 18px;
       background-color: #003d79;
     }
-    .add {
+    .capnhat h3{
       line-height: 40px;
       color: #ccc;
       background-color: #003d79;
       height: 40px;
       text-align: justify;
-      font-size: 18px;
     }
   </style>
 </head>
@@ -99,6 +98,7 @@ if (isset($_POST['btnCapNhat'])) {
         <th colspan="6" class="head">Danh sách sản phẩm</th>
       </tr>
       <tr>
+	      <th>ID</th>
 	      <th>Tên sản phẩm</th>
 	      <th>Giá</th>
 	      <th>Hình ảnh</th>
@@ -111,10 +111,10 @@ if (isset($_POST['btnCapNhat'])) {
         while ($row = $result->fetch_assoc()) {
             echo "<form method='post' enctype='multipart/form-data'>";
             echo "<tr>";
-            /*echo "<td>{$row['id']}<input type='hidden' name='id' value='{$row['id']}'></td>";*/
-            echo "<td><input type='text' name='name' value='{$row['name']}' style='width: 300px; box-sizing: border-box;'></td>";
+            echo "<td>{$row['id']}<input type='hidden' name='id' value='{$row['id']}'></td>";
+            echo "<td><input type='text' name='name' value='{$row['name']}' style='width: 1000px; box-sizing: border-box;'></td>";
             echo "<td><input type='number' name='price' value='{$row['price']}'></td>";
-            echo "<td><img src = '../{$row['image']}' alt='img' width='100' height='100'></td>";
+            echo "<td><img src = '../{$row['image']}' alt='img' width='80' height='80'></td>";
             echo "<td><input type='text' name='description' value='{$row['description']}'></td>";
             echo "<td>
                     <button type='submit' name='btnCapNhat'>Cập nhật</button>
