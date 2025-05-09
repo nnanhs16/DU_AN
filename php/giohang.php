@@ -1,107 +1,111 @@
+<?php
+session_start();
+include("ketnoi.php");
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['btnThanhToan'])) {
+        if (isset($_SESSION['ttkh_id'])) {
+            header("Location: thanhtoan.php");
+            exit;
+        } else {
+            header("Location: thongtinkh.php");
+            exit;
+        }
+    }
+
+    if (isset($_POST['btnXoa'])) {
+        $idXoa = $_POST['idXoa'];
+        if (isset($_SESSION['giohang'][$idXoa])) {
+            unset($_SESSION['giohang'][$idXoa]);
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Giỏ hàng</title>
     <link rel="stylesheet" href="../css/menu.css">
-    <link rel="stylesheet" href="../css/giohang.css">
     <link rel="stylesheet" href="../css/base.css">
-    <title>Danh sách sản phẩm</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 90%;
-            margin: 20px auto;
-        }
-        table, th, td {
-            border: 1px solid black;
-            text-align: left;
-            padding: 8px;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        img {
-            max-width: 100px;
-            height: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/giohang.css">
+
 </head>
 <body>
     <header class="header">
-    <div class="headertop">Xin chào quý khách</div>
-    <div class="headermain">
-        <div class="container">
-            <div class="menu">
-                <div class="logoheader">
-                    <a href="/">
-                        <img src="../image/logo.png" alt="logo">
-                    </a>
-                </div>
-                <div class="chucnang">
-                    <ul>
-                        <li><a href="trangchu.php">Trang chủ</a></li>
-                        <li><a href="truyenthong.php">Truyền Thông</a></li>
-                        <li><a href="sp.php">Cửa Hàng</a></li>
-                        <li><a href="giohang.php">Giỏ Hàng</a></li>
-                        <li><a href="tk.php">Tài Khoản</a></li>
-                    </ul>
+        <div class="headertop">Xin chào quý khách</div>
+        <div class="headermain">
+            <div class="container">
+                <div class="menu">
+                    <div class="logoheader">
+                        <a href="/"><img src="../image/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="chucnang">
+                        <ul>
+                            <li><a href="trangchu.php">Trang chủ</a></li>
+                            <li><a href="truyenthong.php">Truyền Thông</a></li>
+                            <li><a href="sp.php">Cửa Hàng</a></li>
+                            <li><a href="giohang.php">Giỏ Hàng</a></li>
+                            <li><a href="tk.php">Tài Khoản</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-    <h2>Danh sách sản phẩm</h2>
+    <h2>Giỏ Hàng</h2>
 
     <?php
-
-    $servername = "root";
-    $username = ""; // Thay bằng username của bạn
-    $password = ""; // Thay bằng password của bạn
-    $database = "ttsp"; // Tên database
-
-    $conn = mysqli_connect($servername, $username, $password, $database);
-
-    if (!$conn) {
-        die("Kết nối thất bại: " . mysqli_connect_error());
+    if (!isset($_SESSION['giohang']) || count($_SESSION['giohang']) == 0) {
+        echo "<p style='text-align:center;'>Giỏ hàng trống.</p>";
+        exit;
     }
 
-    // 2. Truy vấn lấy dữ liệu
-    $sql = "SELECT * FROM products";
-    $result = mysqli_query($conn, $sql);
+    $tong = 0;
+    echo "<table>
+        <tr>
+            <th>Hình ảnh</th>
+            <th>Tên sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Đơn giá</th>
+            <th>Thành tiền</th>
+            <th>Hành động</th>
+        </tr>";
 
-    // 3. Hiển thị dữ liệu
-    if (mysqli_num_rows($result) > 0) {
-        echo "<table>";
-        echo "<tr>
-                <th>ID</th>
-                <th>Tên sản phẩm</th>
-                <th>Giá</th>
-                <th>Hình ảnh</th>
-                <th>Mô tả</th>
-                <th>Số lượng kho</th>
-              </tr>";
+    foreach ($_SESSION['giohang'] as $id => $soluong) {
+        $sql = "SELECT * FROM products WHERE id = $id";
+        $kq = mysqli_query($conn, $sql);
+        if ($dong = mysqli_fetch_assoc($kq)) {
+            $ten = $dong['name'];
+            $gia = $dong['price'];
+            $hinhanh = $dong['image'];
+            $thanhtien = $gia * $soluong;
+            $tong += $thanhtien;
 
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo "<tr>";
-            echo "<td>" . $row["id"] . "</td>";
-            echo "<td>" . $row["name"] . "</td>";
-            echo "<td>" . number_format($row["price"], 2, ',', '.') . "</td>"; // Định dạng giá
-            echo "<td><img src='" . $row["image"] . "' alt='" . $row["name"] . "'></td>";
-            echo "<td>" . $row["description"] . "</td>";
-            echo "<td>" . $row["stock"] . "</td>";
-            echo "</tr>";
+            echo "<tr>
+                    <td><img src='../$hinhanh' alt='$ten'></td>
+                    <td>$ten</td>
+                    <td>$soluong</td>
+                    <td>" . number_format($gia, 0, ',', '.') . " đ</td>
+                    <td>" . number_format($thanhtien, 0, ',', '.') . " đ</td>
+                    <td>
+                        <form method='post'>
+                            <input type='hidden' name='idXoa' value='$id'>
+                            <input class='btn-xoa' type='submit' name='btnXoa' value='Xóa'>
+                        </form>
+                    </td>
+                </tr>";
         }
-
-        echo "</table>";
-    } else {
-        echo "Không có sản phẩm nào.";
     }
 
-    // 4. Đóng kết nối
-    mysqli_close($conn);
+    echo "</table>";
+    echo "<p class='tongcong'>Tổng cộng: " . number_format($tong, 0, ',', '.') . " đ</p>";
     ?>
 
+    <form method="post" action="xulythanhtoan.php" class="xulythanhtoan">
+    <input class="xyly-thanhtoan" type="submit" name="btnThanhToan" value="Tiến hành Thanh Toán">
+</form>
 </body>
 </html>

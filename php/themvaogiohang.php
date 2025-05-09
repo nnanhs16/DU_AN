@@ -1,22 +1,23 @@
 <?php
 session_start();
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $productId = $_POST['product_id'];
-    $quantity = $_POST['quantity'];
+// SỬA TÊN BIẾN Ở ĐÂY (chỉ khi không sửa sp.php)
+$id = $_POST['product_id']; // Thay đổi từ $_POST['id'] thành $_POST['product_id']
+$soluong = $_POST['quantity']; // Thay đổi từ $_POST['soluong'] thành $_POST['quantity']
 
-    if (!isset($_SESSION['cart'])) {
-        $_SESSION['cart'] = [];
-    }
-
-    if (isset($_SESSION['cart'][$productId])) {
-        $_SESSION['cart'][$productId] += $quantity;
-    } else {
-        $_SESSION['cart'][$productId] = $quantity;
-    }
-
-    echo 'success';
-} else {
-    echo 'invalid request';
+if (!is_numeric($id) || !is_numeric($soluong)) {
+  exit("Dữ liệu không hợp lệ.");
 }
+
+if (!isset($_SESSION['giohang'])) {
+  $_SESSION['giohang'] = [];
+}
+
+if (isset($_SESSION['giohang'][$id])) {
+  $_SESSION['giohang'][$id] += $soluong;
+} else {
+  $_SESSION['giohang'][$id] = $soluong;
+}
+
+echo "OK";
 ?>

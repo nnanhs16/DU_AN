@@ -40,10 +40,6 @@
     </div>
 </header>
 
-
-    
-    
-    
     <div class="anhnen">
         <div class="anhlon">
             <div class="anh">
