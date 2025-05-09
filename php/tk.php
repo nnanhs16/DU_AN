@@ -38,7 +38,7 @@
 
        		if(strtolower($user)== 'admin')
        		{
-       			header("location:trangdmin.php");
+       			header("location:admin.php");
        		}else{
 				header("location:trangchu.php");
        		}
