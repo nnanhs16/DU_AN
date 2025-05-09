@@ -26,7 +26,7 @@
                         <li><a href="truyenthong.php">Truyền Thông</a></li>
                         <li><a href="sp.php">Cửa Hàng</a></li>
                         <li><a href="giohang.php">Giỏ Hàng</a></li>
-                        <li><a href="tk.php">Tài Khoản</a></li>
+                        <li><a href="dangxuat.php">Đăng Xuất</a></li>
                     </ul>
                 </div>
             </div>

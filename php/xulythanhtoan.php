@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $paymentMethod = $_POST['payment_method'];
 
     // Kết nối database (điều chỉnh thông tin kết nối của bạn)
-    include(__DIR__ . "/connect.php");
+    include(__DIR__ . "/ketnoi.php");
     if (!$conn) {
         die("Lỗi kết nối MySQL: " . mysqli_connect_error());
     }
@@ -23,7 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "    <link rel='stylesheet' type='text/css' href='../css/style.css'>";
     echo "</head>";
     echo "<body>";
-    include('../video/menu.html');
 
     echo "<div class='container don-hang-thanh-cong'>"; // Thêm class
 
