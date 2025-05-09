@@ -27,28 +27,27 @@
 		$user = $_POST['txtName'] ;
         $pass = md5($_POST['txtPass']);
        	require_once("ketnoi.php");
-       	$sql = "select*from user where username = '$user'";
+       	$sql = "select * from user where username = '$user'and password = '$pass'";
        	$kq = mysqli_query($conn,$sql);
+
        	if(mysqli_num_rows($kq)>0)
        	{
        		$row = mysqli_fetch_assoc($kq);
-       		$pass_hash=$row["password"];
-       		if(password_verify($pass, $pass_hash))
+			$_SESSION['user_id'] = $row['id'];
+			$_SESSION['username'] = $user;
+
+       		if(strtolower($user)== 'admin')
        		{
-       			$_SESSION["username"]=$user;
-       		mysqli_close($conn);
-       		header("location:sp.php");
+       			header("location:trangdmin.php");
+       		}else{
+				header("location:trangchu.php");
        		}
-       		else
-       		{
-       			echo "Sai mật khẩu".mysqli_error($conn);
-       		}
+			exit;
        	}
-       	else
+	   }else
        	{
-       		echo "Không tồn tại username trong hệ thống".mysqli_error($conn);
-       	}
-	}
+			echo "<script>alert('Sai tài khoản hoặc mật khẩu!');</script>";
+		}	
 ?>	
     <div class="Container">
 		<div class="from-contain">
@@ -60,7 +59,7 @@
 				<input type="password" id="txtPass" name="txtPass" placeholder="Nhập mật khẩu">
 				<input type="submit" value="Đăng nhập" name="btnTK"> 
 			</form>
-            <p>Chưa có tài khoản? <a href="dk.php">Đăng ký</a></p>
+            <p>Chưa có tài khoản? <a href="#" onclick="showRegister()">Đăng Ký</a><p>
 		</div>
 	</div>
 </body>

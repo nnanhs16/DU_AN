@@ -22,8 +22,7 @@
       	  					values('$user','$pass','$email')";
       	  $kq = mysqli_query($conn,$sql);
       	  if ($kq) {
-      	  	mysqli_close($conn);
-      	  	header("location:tk.php");
+			echo "<script>alert('Đăng ký thành công! Vui lòng đăng nhập.');</script>";
       	  }
       	  else
       	  {
