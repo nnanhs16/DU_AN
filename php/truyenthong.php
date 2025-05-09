@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/truyenthong.css">
+    <link rel="stylesheet" href="../css/truyenthong2.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" type="text/css" href="../css/menu.css">
  
