@@ -4,10 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sản phẩm</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
     <link rel="stylesheet" type="text/css" href="../css/sp1.css">
+    <link rel="stylesheet" type="text/css" href="../css/menu.css">
 </head>
 <body>
-    <?php include('../video/menu.html'); ?>
+    <header class="header">
+    <div class="headertop"> xinchaoquykhach</div>
+    <div class="headermain">
+        <div class="container">
+            <div class="menu">
+                <div class="logoheader">
+                    <a href="/">
+                        <img src="../image/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="chucnang">
+                    <ul>
+                        <li><a href="trangchu.php">Trang chủ</a></li>
+                        <li><a href="truyenthong.php">Truyền Thông</a></li>
+                        <li><a href="sp.php">Cửa Hàng</a></li>
+                        <li><a href="giohang.php">Giỏ Hàng</a></li>
+                        <li><a href="tk.php">Tài Khoản</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
     <?php
     include(__DIR__ . "/ketnoi.php");

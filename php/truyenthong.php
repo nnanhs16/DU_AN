@@ -4,23 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/truyenthong2.css">
+    <link rel="stylesheet" href="../css/truyenthong.css">
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/menu.css">
  
 </head>
-<body style="background-color: #eef2f7">
-    <div id="menu"></div> <!-- Chỗ này sẽ hiện menu -->
-    
-        <!-- Các nội dung khác của trang -->
-        <script>
-            fetch('menu.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('menu').innerHTML = data;
-                });
-        </script>
+<body >
+    <header class="header">
+    <div class="headertop">Xin chào quý khách</div>
+    <div class="headermain">
+        <div class="container">
+            <div class="menu">
+                <div class="logoheader">
+                    <a href="/">
+                        <img src="../image/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="chucnang">
+                    <ul>
+                        <li><a href="trangchu.php">Trang chủ</a></li>
+                        <li><a href="truyenthong.php">Truyền Thông</a></li>
+                        <li><a href="sp.php">Cửa Hàng</a></li>
+                        <li><a href="giohang.php">Giỏ Hàng</a></li>
+                        <li><a href="tk.php">Tài Khoản</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+       
   
-</div>
+
         <h1 class="tieu_de"> TRUYỀN THÔNG </h1>
         <div class="tong_quat">
             <div class="tong">

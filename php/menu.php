@@ -25,16 +25,11 @@
                 </div>
                 <div class="chucnang">
                     <ul>
-                        <li><a href="http://localhost/mecthiet/ttsp/video/trangchu.html">Trang chủ</a></li>
-                        <li><a href="http://localhost/mecthiet/ttsp/video/truyenthong2.html">Truyền Thông</a></li>
-                        <li><a href="http://localhost/mecthiet/ttsp/php/sp.php">Cửa Hàng</a></li>
-                        <li><a href="http://localhost/mecthiet/ttsp/php/giohang.php">Giỏ Hàng</a></li>
-                        <li><a href="http://localhost/mecthiet/ttsp/video/taikhoan.html">Tài Khoản</a>
-                            <ul class="cuon">
-                                <li><a href="#">Đăng nhập</a></li>
-                                <li><a href="dangxuat.php">Đăng xuất</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="trangchu.php">Trang chủ</a></li>
+                        <li><a href="truyenthong.php">Truyền Thông</a></li>
+                        <li><a href="sp.php">Cửa Hàng</a></li>
+                        <li><a href="giohang.php">Giỏ Hàng</a></li>
+                        <li><a href="tk.php>Tài Khoản</a></li>
                     </ul>
                 </div>
             </div>

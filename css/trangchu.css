@@ -1,73 +1,64 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.anhlon{
-    width: 100%;
-    max-width: 100%;
-    background: white;
-    margin: 0;
-    padding: 0;
-    
-}
-.header {
-    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
-    top: 0;
-    width: 100vw; /* Sử dụng vw để chắc chắn khớp toàn bộ màn hình */
-    margin: 0;
-    padding: 0;
-    border-radius: 0; /* Đảm bảo không có bo góc */
-}
+/* ================= Header ================= */
 
+/* ================= Background Banner ================= */
+.anhlon {
+    width: 100%;
+    background: white;
+}
 
 .anhnen {
-   
     width: 100vw;
     height: 100vh;
 }
 
 .anhnen img {
-    width: 100vw; /* Chiều rộng toàn bộ màn hình */
-    height: 100vh; /* Chiều cao toàn màn hình */
-    object-fit: cover; /* Giúp ảnh phủ kín nhưng không bị méo */
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
     display: block;
 }
 
-
-
-
-.section-two .container3 .tieude{
+/* ================= Section Two ================= */
+.section-two .container3 .tieude {
     padding-top: 150px;
     color: #003d79;
     font-family: 'Montserrat', sans-serif;
-    font-size: 40px; 
+    font-size: 40px;
     text-align: center;
 }
+
+/* ================= Image Blocks ================= */
 .inner-content a img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Đảm bảo ảnh không bị cắt */
+    object-fit: contain;
 }
+
 .inner-image {
     display: flex;
-    justify-content: center; /* Căn giữa hình ảnh theo chiều ngang */
+    justify-content: center;
     padding: 50px;
     margin: 0 70px;
     text-align: center;
-    
 }
 
 .inner-image img {
-    width: 400px; /* Đặt kích thước ảnh để vừa hàng ngang */
-    height: 400px; /* Đảm bảo tỷ lệ không bị méo */
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
 }
 
+/* ================= Footer ================= */
 .footer {
     display: flex;
-    justify-content: center; /* Căn giữa theo chiều ngang */
-    align-items: center; /* Căn giữa theo chiều dọc nếu footer có chiều cao */
+    justify-content: center;
+    align-items: center;
 }
 
 .footer .logo {
@@ -78,9 +69,10 @@
 }
 
 .footer .logo img {
-    height: 70px; /* Giảm kích thước */
-    width: auto; /* Giữ tỷ lệ ảnh */
+    height: 70px;
+    width: auto;
 }
+
 hr {
     width: 100%;
     height: 1px;
@@ -88,22 +80,22 @@ hr {
     border: none;
     margin: 20px auto;
 }
-.end .from{
+
+.end .from {
     color: #003d79;
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
 }
+
 .end .social-icons {
-        display: flex;
-        justify-content: center; /* Căn giữa icon */
-        gap: 15px; /* Khoảng cách giữa icon */
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 .end .social-icons img {
-    height: 40px; /* Chiều cao nhỏ hơn */
-    width: 40px; /* Giữ nguyên tỷ lệ ảnh */
+    height: 40px;
+    width: 40px;
     display: block;
-    margin: auto; /* Căn giữa logo */
-    justify-content: center; /* Căn giữa icon */
+    margin: auto;
 }
-

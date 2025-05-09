@@ -1,14 +1,3 @@
-<?php
-session_start();
-
-if (!isset($_SESSION['username'])) {
-    header("Location: dangkyvadangnhap.php"); 
-    exit();
-}
-
-
-$username = htmlspecialchars($_SESSION['username'], ENT_QUOTES, 'UTF-8');
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,23 +8,40 @@ $username = htmlspecialchars($_SESSION['username'], ENT_QUOTES, 'UTF-8');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/trangchu.css">
+    <link rel="stylesheet" href="../css/menu.css">
     
     
 
 
 </head>
 <body>
-        <?php include("php/sp.php"); ?>
-        <div id="menu"></div> <!-- Chỗ này sẽ hiện menu -->
+
+<header class="header">
+    <div class="headertop">Xin chào quý khách</div>
+    <div class="headermain">
+        <div class="container">
+            <div class="menu">
+                <div class="logoheader">
+                    <a href="/">
+                        <img src="../image/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="chucnang">
+                    <ul>
+                        <li><a href="trangchu.php">Trang chủ</a></li>
+                        <li><a href="truyenthong.php">Truyền Thông</a></li>
+                        <li><a href="sp.php">Cửa Hàng</a></li>
+                        <li><a href="giohang.php">Giỏ Hàng</a></li>
+                        <li><a href="tk.php">Tài Khoản</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
     
-        <!-- Các nội dung khác của trang -->
-        <script>
-            fetch('menu.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('menu').innerHTML = data;
-                });
-        </script>
     
     
     <div class="anhnen">
@@ -96,5 +102,4 @@ $username = htmlspecialchars($_SESSION['username'], ENT_QUOTES, 'UTF-8');
     </footer>
 </body>
 </html>
-
 

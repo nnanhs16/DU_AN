@@ -3,6 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/giohang.css">
+    <link rel="stylesheet" href="../css/base.css">
     <title>Danh sách sản phẩm</title>
     <style>
         table {
@@ -25,14 +28,37 @@
     </style>
 </head>
 <body>
+    <header class="header">
+    <div class="headertop">Xin chào quý khách</div>
+    <div class="headermain">
+        <div class="container">
+            <div class="menu">
+                <div class="logoheader">
+                    <a href="/">
+                        <img src="../image/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="chucnang">
+                    <ul>
+                        <li><a href="trangchu.php">Trang chủ</a></li>
+                        <li><a href="truyenthong.php">Truyền Thông</a></li>
+                        <li><a href="sp.php">Cửa Hàng</a></li>
+                        <li><a href="giohang.php">Giỏ Hàng</a></li>
+                        <li><a href="tk.php">Tài Khoản</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
     <h2>Danh sách sản phẩm</h2>
 
     <?php
-    // 1. Kết nối đến CSDL
-    $servername = "localhost";
-    $username = "your_username"; // Thay bằng username của bạn
-    $password = "your_password"; // Thay bằng password của bạn
+
+    $servername = "root";
+    $username = ""; // Thay bằng username của bạn
+    $password = ""; // Thay bằng password của bạn
     $database = "ttsp"; // Tên database
 
     $conn = mysqli_connect($servername, $username, $password, $database);

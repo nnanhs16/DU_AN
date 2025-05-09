@@ -1,81 +1,66 @@
-
-.header{
-    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
-    position: fixed; /* Giữ cố định menu */
-    top: 0; /* Gắn menu vào đầu trang */
-    width: 100%;
-    margin: 0 auto;
+.header {
     position: fixed;
+    top: 0;
     left: 0;
     width: 100vw;
     background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     z-index: 999;
 }
 
-
-.headertop{
-    background:#003d79;
+.headertop {
+    background: #003d79;
     color: white;
     font-size: 18px;
     padding: 8px;
     text-align: center;
 }
-.headermain .menu{
-   
-    
+
+.headermain .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
 }
 
-.headermain .logoheader a{
+.logoheader a {
     color: #003d79;
     display: flex;
     align-items: center;
     font-size: 20px;
 }
-.headermain .logoheader img {
+
+.logoheader img {
     padding-left: 200px;
     height: 60px;
-    width: auto;
     margin-right: 50px;
-    align-items: center;
     margin-top: -10px;
 }
 
-
-
-.headermain .chucnang ul{
-    list-style-type: none;
+.chucnang {
     display: flex;
     justify-content: center;
-   
+    margin: 0 auto;
 }
-.headermain .chucnang ul {
+
+.chucnang ul {
+    list-style: none;
     display: flex;
     justify-content: center;
     width: 100%;
 }
-.headermain .chucnang ul li{
-    margin-left:60px;
-    margin-right: 60px;
+
+.chucnang ul li {
+    margin: 0 60px;
 }
 
-.headermain .chucnang li a:hover {
-    color: gold; /* Đổi sang màu vàng khi rê chuột vào */
-}
-.headermain .chucnang ul li a{
+.chucnang li a {
     color: #003d79;
     font-size: 18px;
     text-align: center;
+    text-decoration: none;
 }
 
-.headermain .chucnang {
-    padding: 0;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+.chucnang li a:hover {
+    color: gold;
 }
-
-
