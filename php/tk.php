@@ -11,16 +11,6 @@
 		
 </head>
 <body>
-	<div id="menu"></div> <!-- Chỗ này sẽ hiện menu -->
-    
-        <!-- Các nội dung khác của trang -->
-        <script>
-            fetch('menu.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('menu').innerHTML = data;
-                });
-        </script>
         <?php
 		session_start();
 	if(isset($_POST['btnTK']))
