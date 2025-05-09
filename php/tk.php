@@ -22,6 +22,7 @@
                 });
         </script>
         <?php
+		session_start();
 	if(isset($_POST['btnTK']))
 	{
 		$user = $_POST['txtName'] ;
@@ -36,18 +37,18 @@
 			$_SESSION['user_id'] = $row['id'];
 			$_SESSION['username'] = $user;
 
-       		if(strtolower($user)== 'admin')
+       		if(strtolower($user) == 'admin')
        		{
        			header("location:admin.php");
        		}else{
 				header("location:trangchu.php");
        		}
 			exit;
-       	}
 	   }else
        	{
 			echo "<script>alert('Sai tài khoản hoặc mật khẩu!');</script>";
-		}	
+		}
+	}	
 ?>	
     <div class="Container">
 		<div class="from-contain">
