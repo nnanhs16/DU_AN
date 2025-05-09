@@ -39,7 +39,7 @@
                 <label for="txtEmail">Email</label>
 				<input type="email" id="txtEmail" name="txtEmail" placeholder="vd: abc@gmail.com">
 				<label for="txtPass">Mật khẩu</label>
-				<input type="password" name="" placeholder="Nhập mật khẩu">
+				<input type="password" name="txtPass" placeholder="Nhập mật khẩu">
                 <label>Nhập lại mật khẩu</label>
 				<input type="password" name="" placeholder="Nhập lại mật khẩu">
 				<input type="submit" name="btnDK" value="Đăng ký">
