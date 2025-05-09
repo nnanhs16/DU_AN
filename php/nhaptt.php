@@ -1,140 +1,78 @@
 <?php
 session_start();
-require_once("ketnoi.php");
+include("ketnoi.php");
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnChot'])) {
-    $name     = $_POST['txtName'];
-    $sdt     = $_POST['txtSdt'];
-    $pay   = $_POST['txtPay'];
-    $address      = $_POST['txtAddress'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $ten = $_POST['ten'];
+    $sdt = $_POST['sdt'];
+    $email = $_POST['email'];
+    $dc = $_POST['dc'];
+    $pttt = $_POST['pttt'];
+    // ... lấy các trường khác
 
-    $sql = "INSERT INTO khachhang(name, sdt, pay, address)
-            VALUES ('$name', '$sdt', 'pay', 'address')";
-    $kq = mysqli_query($conn, $sql);
+    // 1. Lưu thông tin khách hàng vào database
+    $sql_insert_khachhang = "INSERT INTO khachhang (ten, sdt, email, dc, pttt)
+                                  VALUES ('$ten', '$sdt', '$email', '$dc', '$pttt')";
+    if (mysqli_query($conn, $sql_insert_khachhang)) {
+        $khachhang_id = mysqli_insert_id($conn); // Lấy ID vừa tạo
 
-    if ($kq) {
-        $_SESSION['ttkh_id'] = mysqli_insert_id($conn); // Ghi lại ID khách hàng 
-        mysqli_close($conn);
+        // 2. Lưu ID khách hàng vào session
+        $_SESSION['khachhang_id'] = $khachhang_id;
+
+        // 3. Chuyển hướng trở lại thanhtoan.php
         header("Location: thanhtoan.php");
         exit;
     } else {
-        echo "Lỗi khi lưu thông tin khách hàng: " . mysqli_error($conn);
+        echo "Lỗi: " . mysqli_error($conn);
+        // Có thể thêm log hoặc thông báo khác
     }
-}
+} // <--- Đã thêm dấu ngoặc nhọn đóng cho khối lệnh if
 ?>
-
+        <link rel="stylesheet" href="../css/nhaptt.css">
+        <link rel="stylesheet" href="../css/menu.css">
+        <link rel="stylesheet" href="../css/base.css">
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thông Tin Khách Hàng</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Quicksand', sans-serif;
-            background-image: url('https://png.pngtree.com/background/20210709/original/pngtree-hand-drawn-milk-banner-background-picture-image_927636.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .form-box {
-            width: 500px;
-            border: 2px solid #ff4500;
-            padding: 30px;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-family: 'Lobster', cursive;
-            color: #ff4500;
-        }
-        table td {
-            padding: 10px;
-            font-size: 16px;
-        }
-        table input, table select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .buttons {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .buttons input, .buttons button {
-            padding: 10px 20px;
-            margin: 5px;
-            border-radius: 10px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .submit-btn {
-            background-color: #ff4500;
-            color: white;
-        }
-        .submit-btn:hover {
-            background-color: #e03e00;
-        }
-        .back-btn {
-            background-color: gray;
-            color: white;
-        }
-        .back-btn:hover {
-            background-color: #5a5a5a;
-        }
-    </style>
+    <title>VUI LÒNG NHẬP THÔNG TIN CỦA </title>
 </head>
 <body>
-    <div class="form-box">
-        <h2>Thông Tin Khách Hàng</h2>
-        <form method="post">
-            <table>
-                <tr>
-                    <td>Họ và tên:</td>
-                    <td><input type="text" name="txtName" required></td>
-                </tr>
-                <tr>
-                    <td>Số điện thoại:</td>
-                    <td><input type="text" name="txtSdt" required></td>
-                </tr>
-                <tr>
-                    <td>Hình thức thanh toán:</td>
-                    <td>
-                        <select name="txtPt" required>
-                            <option value="Chuyển Khoản Ngân hàng">Chuyển Khoản Ngân hàng</option>
-                            <option value="Thanh Toán Khi Giao Hàng">Thanh Toán Khi Giao Hàng</option>
-                            <option value="Thanh Toán Online">Thanh Toán Online</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Địa chỉ:</td>
-                    <td><input type="text" name="txtAddress" required></td>
-                </tr>
-                <tr>
-                    
-            </table>
-            <div class="buttons">
-                <input class="submit-btn" type="submit" name="btnChot" value="Mua Hàng">
-                <a href="giohang.php"><button type="button" class="back-btn">Quay lại</button></a>
+    <header class="header">
+    <div class="headertop">Xin chào quý khách</div>
+    <div class="headermain">
+        <div class="container">
+            <div class="menu">
+                <div class="logoheader">
+                    <a href="/">
+                        <img src="../image/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="chucnang">
+                    <ul>
+                        <li><a href="trangchu.php">Trang chủ</a></li>
+                        <li><a href="truyenthong.php">Truyền Thông</a></li>
+                        <li><a href="sp.php">Cửa Hàng</a></li>
+                        <li><a href="giohang.php">Giỏ Hàng</a></li>
+                        <li><a href="dangxuat.php">Đăng Xuất</a></li>
+                    </ul>
+                </div>
             </div>
-        </form>
+        </div>
     </div>
+</header>
+
+    <h2>Nhập thông tin khách hàng</h2>
+    <form method="post">
+        <label for="ten">Họ tên:</label><input type="text" id="ten" name="ten" required><br>
+        <label for="sdt">Số điện thoại:</label><input type="text" id="sdt" name="sdt" required><br>
+        <label for="email">Email:</label><input type="email" id="email" name="email" required><br>
+        <label for="dc">Địa chỉ:</label><input type="text" id="dc" name="dc" required><br>
+        <label for="pttt">Phương thức thanh toán:</label>
+        <select name="pttt">
+            <option value="cod">Thanh toán khi nhận hàng</option>
+            <option value="transfer">Chuyển khoản</option>
+            </select><br>
+        <input type="submit" value="Tiếp tục">
+    </form>
 </body>
 </html>

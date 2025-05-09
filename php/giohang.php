@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header("Location: thanhtoan.php");
             exit;
         } else {
-            header("Location: thongtinkh.php");
+            header("Location: nhaptt.php");
             exit;
         }
     }
@@ -30,7 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/giohang.css">
-
 </head>
 <body>
     <header class="header">
@@ -78,9 +77,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = "SELECT * FROM products WHERE id = $id";
         $kq = mysqli_query($conn, $sql);
         if ($dong = mysqli_fetch_assoc($kq)) {
-            $ten = $dong['name'];
-            $gia = $dong['price'];
-            $hinhanh = $dong['image'];
+            $ten = $dong['tensp'];
+            $gia = $dong['gia'];
+            $hinhanh = $dong['hinhanh'];
             $thanhtien = $gia * $soluong;
             $tong += $thanhtien;
 
@@ -104,8 +103,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo "<p class='tongcong'>Tổng cộng: " . number_format($tong, 0, ',', '.') . " đ</p>";
     ?>
 
-    <form action="thanhtoan.php" method="post" class="xulythanhtoan">
-    <input class="xyly-thanhtoan" type="submit" name="btnXulythanhtoan" value="Tiến hành Thanh Toán">
+    <form method="post" class="checkout">
+        <button type="submit" name="btnThanhToan" class="btn-checkout">Thanh toán</button>
     </form>
 </body>
 </html>
