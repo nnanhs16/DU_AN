@@ -32,6 +32,8 @@
         </div>
     </div>
 </header>
+<?php include 'menu.php'; ?>
+  
 
     <?php
     include(__DIR__ . "/ketnoi.php");

@@ -1,17 +1,10 @@
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-<<<<<<< HEAD
-body {
-    font-family: 'Montserrat', sans-serif;
-    padding-top: 120px; /* cần thiết để tránh nội dung bị header che */
-=======
 body{
     font-family: 'Times New Roman', Times, serif;
->>>>>>> 51fc90e3c8bed5679a42be7a0b60ea0a1c0989c3
 }
 .tieu_de:hover{
     transform: scale(1.1);
@@ -23,15 +16,9 @@ body{
     padding-left: 50px;
     padding-bottom: 50px;
 }
-<<<<<<< HEAD
-.tieu_de {
-    /* margin-top: 40px; */ /* Bỏ cái này */
-    padding-top: 40px; /* Thay bằng padding-top nếu cần */
-}
-=======
->>>>>>> 51fc90e3c8bed5679a42be7a0b60ea0a1c0989c3
 
 .tieu_de{
+    margin-top: 40px;
     text-align: center;
     color:#003d79;
     font-weight: bold;

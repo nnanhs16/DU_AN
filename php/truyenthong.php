@@ -4,46 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="../css/truyenthong.css">
-=======
->>>>>>> 53b266960655917cd910588f65d2a104d4e5ef91
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/truyenthong.css">
     <link rel="stylesheet" type="text/css" href="../css/menu.css">
  
 </head>
 <body >
-<<<<<<< HEAD
    <?php include 'menu.php'; ?>
-
-
-<div class = "container">
-=======
-    <header class="header">
-    <div class="headertop">Xin chào quý khách</div>
-    <div class="headermain">
-        <div class="container">
-            <div class="menu">
-                <div class="logoheader">
-                    <a href="/">
-                        <img src="../image/logo.png" alt="logo">
-                    </a>
-                </div>
-                <div class="chucnang">
-                    <ul>
-                        <li><a href="trangchu.php">Trang chủ</a></li>
-                        <li><a href="truyenthong.php">Truyền Thông</a></li>
-                        <li><a href="sp.php">Cửa Hàng</a></li>
-                        <li><a href="giohang.php">Giỏ Hàng</a></li>
-                        <li><a href="dangxuat.php">Đăng Xuất</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    </header>
->>>>>>> 51fc90e3c8bed5679a42be7a0b60ea0a1c0989c3
+  
        
   
 
@@ -68,8 +36,8 @@
                 <div class="left">
                     <img src="https://www.thmilk.vn/wp-content/uploads/2025/03/Banner-ngang_1170-x-660-px-825x510.jpg" alt="sữa chua">
                     <p>TH true YOGURT PROBIOTICS: Bí quyết vàng bổ sung lợi khuẩn cho cả gia đình
-                    Tháng Ba 24, 2025 Sữa uống lên men TH true YOGURT PROBIOTICS là sản phẩm có dấu ấn 
-                    khác biệt trên thị trường khi được lên men từ sữa tươi sạch, chứa lượng lợi khuẩn cao, hỗ trợ tăng 
+                    Tháng Ba 24, 2025 Sữa uống lên men TH true YOGURT PROBIOTICS là sản phẩm có dấu ấn
+khác biệt trên thị trường khi được lên men từ sữa tươi sạch, chứa lượng lợi khuẩn cao, hỗ trợ tăng 
                     cường đề kháng và sức khỏe đường ruột.Tỷ lệ sữa tươi sạch chiếm tới 40% cùng quy trình lên men tự nhiên.
                     </p>
                 </div>
@@ -107,16 +75,9 @@
                 <a href="https://www.instagram.com/thtruemilk.official/" target="_blank"><img src="../image/logoig.jpg" alt="Instagram" width="50px"></a>
                 <a href="https://www.youtube.com/@THtrueMILKvn" target="_blank"><img src="../image/logoytb.png" alt="YouTube" width="50px"></a>
             </div>
-            
-            <div class="from">     
-                Cơ quan chủ quản: Công ty Cổ phần Chuỗi Thực phẩm TH<br>
+Cơ quan chủ quản: Công ty Cổ phần Chuỗi Thực phẩm TH<br>
                 Trụ sở: 166 Nguyễn Thái Học, P. Quang Trung, TP. Vinh, Nghệ An – Điện thoại: 1800545440<br>
                 MST: 2901270911 - Số ĐKKD: 2901270911 cấp ngày 06/09/2010 bởi Sở KH và ĐT tỉnh Nghệ An<br>
             </div>
-<<<<<<< HEAD
-            </div>
-
-=======
->>>>>>> 51fc90e3c8bed5679a42be7a0b60ea0a1c0989c3
 </body>
 </html>

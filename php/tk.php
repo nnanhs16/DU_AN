@@ -42,7 +42,7 @@
 ?>	
     <div class="Container">
 		<div class="from-contain">
-			<h2 >Thành viên đăng nhập</h2>
+			<h2 >Thành Viên Đăng Nhập</h2>
 			<form method="post">
 				<label for="txtName">Tên khách hàng</label>
 				<input type="text" id="txtName" name="txtName"  autocomplete="off">

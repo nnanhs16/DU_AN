@@ -22,18 +22,12 @@ if (!$khachhang) {
 // Nếu nhấn nút xác nhận thanh toán
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnXacNhan'])) {
     $hoten = $khachhang['ten']; // Sửa thành $hoten
-<<<<<<< HEAD
-    $sđt = $khachhang['sdt'];
+
+    $sđt = $khachhang['sđt'];
     $email = $khachhang['email'];
     $diachi = $khachhang['diachi'];
     $thanhtoan = $khachhang['thanhtoan'];
-=======
-    $sdt = $khachhang['sđt'];
-    $email = $khachhang['email'];
-    $diachi = $khachhang['diachi'];
-    $phuongthucthanhtoan = $khachhang['thanhtoan'];
-    $ngaydat = date('Y-m-d');
->>>>>>> 51fc90e3c8bed5679a42be7a0b60ea0a1c0989c3
+
 
     foreach ($_SESSION['giohang'] as $id => $soluong) {
         $result = mysqli_query($conn,"SELECT * FROM products WHERE id = $id");
@@ -41,8 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnXacNhan'])) {
             $tensp = $row['tensp']; // Lấy tên sản phẩm vào $sp
             $gia = $row['gia'];
          
-     $sql_insert = "INSERT INTO quanlidonhang (hoten, tensp, sđt, soluongdat, ngaydat, thanhtoan, email, diachi, gia)
-               VALUES ('$hoten', '$tensp', '$sđt', $soluong, '$ngaydat', '$phuongthucthanhtoan', '$email', '$diachi', $gia)";
+     $sql_insert = "INSERT INTO quanlidonhang (hoten, tensp, sđt, soluongdat, thanhtoan, email, diachi, gia)
+               VALUES ('$hoten', '$tensp', '$sđt', $soluong, '$thanhtoan', '$email', '$diachi', $gia)";
             mysqli_query($conn,$sql_insert);
         }
     }

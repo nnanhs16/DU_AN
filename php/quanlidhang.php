@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quản Lý Đơn Hàng</title>
-
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/menu.css"> 
 	<style>
 		* {
 			box-sizing: border-box;
@@ -60,11 +61,11 @@
 
 	<table>
 		<tr>
+			<th>ID</th>
 			<th>Tên Khách Hàng</th>
 			<th>Tên sản Phẩm</th>
 			<th>Số Điện Thoại</th>
 			<th>Số Lượng</th>
-			<th>Ngày Đặt</th>
 			<th>Phương Thức Thanh Toán</th>
 			<th>Email</th>
 			<th>Địa Chỉ</th>
@@ -84,11 +85,11 @@
 			if ($ketqua->num_rows > 0) {
 				while ($row = mysqli_fetch_assoc($ketqua)) {
 					echo "<tr>
+						<td>{$row['id']}</td>
 						<td>{$row['hoten']}</td>
 						<td>{$row['tensp']}</td>
 						<td>{$row['sđt']}</td>
 						<td>{$row['soluongdat']}</td>
-						<td>{$row['ngaydat']}</td>
 						<td>{$row['thanhtoan']}</td>
 						<td>{$row['email']}</td>
 						<td>{$row['diachi']}</td>
