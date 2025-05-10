@@ -4,46 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<<<<<<< HEAD
+    <link rel="stylesheet" href="../css/truyenthong.css">
+=======
+>>>>>>> 53b266960655917cd910588f65d2a104d4e5ef91
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/truyenthong.css">
     <link rel="stylesheet" type="text/css" href="../css/menu.css">
  
 </head>
 <body >
+<<<<<<< HEAD
    <?php include 'menu.php'; ?>
 
 
 <div class = "container">
+=======
+    <header class="header">
+    <div class="headertop">Xin chào quý khách</div>
+    <div class="headermain">
+        <div class="container">
+            <div class="menu">
+                <div class="logoheader">
+                    <a href="/">
+                        <img src="../image/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="chucnang">
+                    <ul>
+                        <li><a href="trangchu.php">Trang chủ</a></li>
+                        <li><a href="truyenthong.php">Truyền Thông</a></li>
+                        <li><a href="sp.php">Cửa Hàng</a></li>
+                        <li><a href="giohang.php">Giỏ Hàng</a></li>
+                        <li><a href="dangxuat.php">Đăng Xuất</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+>>>>>>> 51fc90e3c8bed5679a42be7a0b60ea0a1c0989c3
        
   
 
         <h1 class="tieu_de"> TRUYỀN THÔNG </h1>
         <div class="tong_quat">
-            <div class="tong">
-                <div class="tong_1">
+            <div class="head">
+                <div class="headlf">
                     <img src="../image/truyenthong1.jpg" alt="ảnh sữa 1">
                 </div>
-                <div class="tong_2">
+                <div class="headrg">
                     <h3>TUYÊN BỐ GIẢI THÍCH ĐỦ ĐIỀU KIỆN VỀ TRẠNG THÁI TRUNG HÒA CARBON</h3>
                     <br>
-                    <h5>Tuyên bố giải thích đủ điều kiện (QES) bao gồm tất cả các thông tin cần thiết 
+                    <h4>Tuyên bố giải thích đủ điều kiện (QES) bao gồm tất cả các thông tin cần thiết 
                     về trạng thái trung hòa carbon của đối tượng được lựa chọn. Tất cả thông tin được cung cấp trong báo cáo này 
                     đã được bên thứ ba (Control Union) xem xét và được coi là chính xác. Nếu có bất kỳ thông tin nào ảnh hưởng đến 
-                    tính hợp lệ của các tuyên bố, thì tài liệu này sẽ được cập nhật.</h5>
+                    tính hợp lệ của các tuyên bố, thì tài liệu này sẽ được cập nhật.</p>
                 </div>
             </div>
             <hr style="border: 0,5cap solid #ccc; margin: 30px 0;">
-            <h3 class="phu">Thông tin về sản phẩm và dịch vụ</h3>
+            <h2>Thông tin về sản phẩm và dịch vụ</h2>
             <div class="content">
-                <div class="trai">
+                <div class="left">
                     <img src="https://www.thmilk.vn/wp-content/uploads/2025/03/Banner-ngang_1170-x-660-px-825x510.jpg" alt="sữa chua">
-                    <h5>TH true YOGURT PROBIOTICS: Bí quyết vàng bổ sung lợi khuẩn cho cả gia đình
-                        Tháng Ba 24, 2025
-                        Sữa uống lên men TH true YOGURT PROBIOTICS là sản phẩm có dấu ấn khác biệt trên thị trường khi được lên men từ sữa tươi sạch, chứa lượng lợi khuẩn cao, hỗ trợ tăng cường đề kháng và sức khỏe đường ruột.
-                        Tỷ lệ sữa tươi sạch chiếm tới 40% cùng quy trình lên men tự nhiên.
-                    </h5>
+                    <p>TH true YOGURT PROBIOTICS: Bí quyết vàng bổ sung lợi khuẩn cho cả gia đình
+                    Tháng Ba 24, 2025 Sữa uống lên men TH true YOGURT PROBIOTICS là sản phẩm có dấu ấn 
+                    khác biệt trên thị trường khi được lên men từ sữa tươi sạch, chứa lượng lợi khuẩn cao, hỗ trợ tăng 
+                    cường đề kháng và sức khỏe đường ruột.Tỷ lệ sữa tươi sạch chiếm tới 40% cùng quy trình lên men tự nhiên.
+                    </p>
                 </div>
-                <div class="giua">
+                <div class="between">
                     <img src="https://www.thmilk.vn/wp-content/uploads/2025/03/thumbnai.jpg" alt="vỏ hộp">
                     <p>
                         THÔNG TIN CHI TIẾT VỀ CHƯƠNG TRÌNH “THU GOM VỎ HỘP, LAN TỎA SỐNG XANH 2025”
@@ -53,11 +83,13 @@
                     các hành động thu gom và tái chế vỏ hộp sữa chung tay góp phần bảo vệ môi trường.
                     </p>
                 </div>
-                <div class="phai">
+                <div class="right">
                     <img src="https://www.thmilk.vn/wp-content/uploads/2024/12/bdb59aa5c952730c2a43.jpg">
-                    <p>Sữa chua uống tiệt trùng TH true YOGURT TOPPING thơm ngon như đồ uống “full topping” pha chế Tháng Mười Hai 9, 2024 Tập đoàn TH vừa chính thức ra mắt ba sản phẩm mới thuộc bộ sản phẩm sữa chua uống tiệt trùng TH true YOGURT TOPPING.
-
-                    Được lên men tự nhiên từ sữa tươi trang trại, sạch, nguyên chất theo chuẩn của trang trại TH, sản phẩm mới được ví như thức uống “full topping” sáng tạo, nổi bật với topping nha đam thật, mang đến cảm giác mát lành. Sự kết hợp này hứa hẹn sẽ nâng tầm trải nghiệm cho khách hàng, đáp ứng nhu cầu thưởng thức những sản phẩm chất lượng và tốt cho sức khỏe.
+                    <p>SỮA TƯƠI TIỆT TRÙNG TH true YOGURT TOPPING thơm ngon như đồ uống “full topping” pha chế Tháng Mười Hai 9, 2024 
+                    Tập đoàn TH vừa chính thức ra mắt ba sản phẩm mới thuộc bộ sản phẩm sữa chua uống tiệt trùng TH true YOGURT TOPPING.
+                    Được lên men tự nhiên từ sữa tươi trang trại, sạch, nguyên chất theo chuẩn của trang trại TH, sản phẩm mới được 
+                    ví như thức uống “full topping” sáng tạo, nổi bật với topping nha đam thật.
+                </p>
                 </div>
             </div>
             <hr style="border: 1px solid #ccc; margin: 30px 0;">
@@ -65,17 +97,12 @@
                 <div class="logo">
                 <a href="index.html">
                     <img src="../image/logo.png" alt="logo" width="100px" >
-                    
                 </a>
+                </div>
             </div>
-         
-            
-        </div>
-        <div class="end">
-            <div class="gach">
-                <hr style="border: 1px solid #ccc; margin: 30px 0;">
-            </div>
-            <div class="social-icons">
+            <hr style="border: 1px solid #ccc; margin: 30px 0;">
+
+            <div class="icons">
                 <a href="https://www.facebook.com/thmilk/?locale=vi_VN" target="_blank"><img src="../image/logofb.png" alt="Facebook" width="50px"></a>
                 <a href="https://www.instagram.com/thtruemilk.official/" target="_blank"><img src="../image/logoig.jpg" alt="Instagram" width="50px"></a>
                 <a href="https://www.youtube.com/@THtrueMILKvn" target="_blank"><img src="../image/logoytb.png" alt="YouTube" width="50px"></a>
@@ -86,7 +113,10 @@
                 Trụ sở: 166 Nguyễn Thái Học, P. Quang Trung, TP. Vinh, Nghệ An – Điện thoại: 1800545440<br>
                 MST: 2901270911 - Số ĐKKD: 2901270911 cấp ngày 06/09/2010 bởi Sở KH và ĐT tỉnh Nghệ An<br>
             </div>
+<<<<<<< HEAD
             </div>
 
+=======
+>>>>>>> 51fc90e3c8bed5679a42be7a0b60ea0a1c0989c3
 </body>
 </html>

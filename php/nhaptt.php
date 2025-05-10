@@ -4,6 +4,7 @@ include("ketnoi.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ten = $_POST['ten'];
+<<<<<<< HEAD
     $sđt = $_POST['sđt'];
     $email = $_POST['email'];
     $diachi = $_POST['diachi'];
@@ -12,6 +13,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // 1. Lưu thông tin khách hàng vào database
     $sql_insert_khachhang = "INSERT INTO khachhang (ten, sđt, email, diachi, thanhtoan)
                                   VALUES ('$ten', '$sđt', '$email', '$diachi', '$thanhtoan')";
+=======
+    $sdt = $_POST['sđt'];
+    $email = $_POST['email'];
+    $dc = $_POST['diachi'];
+    $pttt = $_POST['thanhtoan'];
+    // ... lấy các trường khác
+
+    // 1. Lưu thông tin khách hàng vào database
+    $sql_insert_khachhang = "INSERT INTO khachhang (ten, sđt, email, diachi, thanhtoan)
+                                  VALUES ('$ten', '$sdt', '$email', '$dc', '$pttt')";
+>>>>>>> 51fc90e3c8bed5679a42be7a0b60ea0a1c0989c3
     if (mysqli_query($conn, $sql_insert_khachhang)) {
         $khachhang_id = mysqli_insert_id($conn); // Lấy ID vừa tạo
 
@@ -63,9 +75,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h2>Nhập thông tin khách hàng</h2>
     <form method="post">
         <label for="ten">Họ tên:</label><input type="text" id="ten" name="ten" required><br>
+<<<<<<< HEAD
         <label for="sđt">Số điện thoại:</label><input type="text" id="sđt" name="sđt" required><br>
         <label for="email">Email:</label><input type="email" id="email" name="email" required><br>
         <label for="diachi">Địa chỉ:</label><input type="text" id="diachi" name="diachi" required><br>
+=======
+        <label for="sđt">Số điện thoại:</label><input type="text" id="sdt" name="sđt" required><br>
+        <label for="email">Email:</label><input type="email" id="email" name="email" required><br>
+        <label for="diachi">Địa chỉ:</label><input type="text" id="dc" name="diachi" required><br>
+>>>>>>> 51fc90e3c8bed5679a42be7a0b60ea0a1c0989c3
         <label for="thanhtoan">Phương thức thanh toán:</label>
         <select name="thanhtoan">
             <option value="cod">Thanh toán khi nhận hàng</option>

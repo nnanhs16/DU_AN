@@ -22,10 +22,18 @@ if (!$khachhang) {
 // Nếu nhấn nút xác nhận thanh toán
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnXacNhan'])) {
     $hoten = $khachhang['ten']; // Sửa thành $hoten
+<<<<<<< HEAD
     $sđt = $khachhang['sdt'];
     $email = $khachhang['email'];
     $diachi = $khachhang['diachi'];
     $thanhtoan = $khachhang['thanhtoan'];
+=======
+    $sdt = $khachhang['sđt'];
+    $email = $khachhang['email'];
+    $diachi = $khachhang['diachi'];
+    $phuongthucthanhtoan = $khachhang['thanhtoan'];
+    $ngaydat = date('Y-m-d');
+>>>>>>> 51fc90e3c8bed5679a42be7a0b60ea0a1c0989c3
 
     foreach ($_SESSION['giohang'] as $id => $soluong) {
         $result = mysqli_query($conn,"SELECT * FROM products WHERE id = $id");

@@ -14,12 +14,12 @@
 			width: 400px;
             background-color: white;
             border-radius: 12px;
-			/* height: 500px; */
+			height: 500px;
 			box-shadow: 0  8px 20px grey;
 			padding: 30px 25px;
 
 		}
-         .h1 {
+        .from-contain h1 {
             text-align: center;
             margin-bottom: 25px;
             color: #00416A;
