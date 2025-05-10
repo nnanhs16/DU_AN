@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="../css/truyenthong.css">
-=======
->>>>>>> 53b266960655917cd910588f65d2a104d4e5ef91
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/truyenthong.css">
     <link rel="stylesheet" type="text/css" href="../css/menu.css">

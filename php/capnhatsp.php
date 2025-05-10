@@ -49,6 +49,7 @@ if (isset($_POST['btnCapNhat'])) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Danh sách sản phẩm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">>
 	<style type="text/css">
     *{
       margin: 0;

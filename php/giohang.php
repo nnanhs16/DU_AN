@@ -30,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/giohang.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">>
 </head>
 <body>
     <header class="header">
