@@ -15,8 +15,8 @@ if (isset($_POST['btnThem'])) {
 
    
     $target_dir = "image/";
-    $target_file = $target_dir . basename($_FILES["hinhanh"]["tensp"]);
-    move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+    $target_file = $target_dir . basename($_FILES["hinhanh"]["name"]);
+    move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file);
 
     $conn->query("INSERT INTO products(tensp, gia, hinhanh, ttsp) VALUES ('$tensp', '$gia', '$target_file', '$thongtin')");
     header("Location: capnhatsp.php");
@@ -30,10 +30,10 @@ if (isset($_POST['btnCapNhat'])) {
     $gia = $_POST['gia'];
     $thongtin = $_POST['ttsp'];
 
- if (!empty($_FILES["image"]["name"])) {
+ if (!empty($_FILES["hinhanh"]["name"])) {
         $target_dir = "image/";
-        $target_file = $target_dir . basename($_FILES["image"]["tensp"]);
-        move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+        $target_file = $target_dir . basename($_FILES["hinhanh"]["name"]);
+        move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file);
         $conn->query("UPDATE products SET tensp='$tensp', gia='$gia', hinhanh='$target_file', ttsp='$thongtin' WHERE id=$id");
     } else {
         $conn->query("UPDATE products SET tensp='$tensp', gia='$gia', ttsp='$thongtin' WHERE id=$id");

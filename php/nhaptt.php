@@ -4,14 +4,14 @@ include("ketnoi.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ten = $_POST['ten'];
-    $sdt = $_POST['sdt'];
+    $sdt = $_POST['sđt'];
     $email = $_POST['email'];
-    $dc = $_POST['dc'];
-    $pttt = $_POST['pttt'];
+    $dc = $_POST['diachi'];
+    $pttt = $_POST['thanhtoan'];
     // ... lấy các trường khác
 
     // 1. Lưu thông tin khách hàng vào database
-    $sql_insert_khachhang = "INSERT INTO khachhang (ten, sdt, email, dc, pttt)
+    $sql_insert_khachhang = "INSERT INTO khachhang (ten, sđt, email, diachi, thanhtoan)
                                   VALUES ('$ten', '$sdt', '$email', '$dc', '$pttt')";
     if (mysqli_query($conn, $sql_insert_khachhang)) {
         $khachhang_id = mysqli_insert_id($conn); // Lấy ID vừa tạo
@@ -64,11 +64,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h2>Nhập thông tin khách hàng</h2>
     <form method="post">
         <label for="ten">Họ tên:</label><input type="text" id="ten" name="ten" required><br>
-        <label for="sdt">Số điện thoại:</label><input type="text" id="sdt" name="sdt" required><br>
+        <label for="sđt">Số điện thoại:</label><input type="text" id="sdt" name="sđt" required><br>
         <label for="email">Email:</label><input type="email" id="email" name="email" required><br>
-        <label for="dc">Địa chỉ:</label><input type="text" id="dc" name="dc" required><br>
-        <label for="pttt">Phương thức thanh toán:</label>
-        <select name="pttt">
+        <label for="diachi">Địa chỉ:</label><input type="text" id="dc" name="diachi" required><br>
+        <label for="thanhtoan">Phương thức thanh toán:</label>
+        <select name="thanhtoan">
             <option value="cod">Thanh toán khi nhận hàng</option>
             <option value="transfer">Chuyển khoản</option>
             </select><br>

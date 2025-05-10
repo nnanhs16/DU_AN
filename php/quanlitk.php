@@ -120,7 +120,6 @@ $result = $conn->query($sql);
     <table>
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Tên Người Dùng</th>
                 <th>Email</th>
                 <th>Mật Khẩu</th>
@@ -130,7 +129,6 @@ $result = $conn->query($sql);
         <tbody>
             <?php while ($row = $result->fetch_assoc()) { ?>
             <tr>
-                <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['username']; ?></td>
                 <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['password']; ?></td>
