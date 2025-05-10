@@ -1,92 +1,45 @@
+body {
+    margin: 0;
+    background-image: url('https://i.pinimg.com/736x/8d/95/f0/8d95f0098999bad95645970afc1810d5.jpg');
+    background-size: cover;
+    /* background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; */
+}
 
-    body {
-        font-family: 'Montserrat', sans-serif;
-        margin: 0;
-        background: linear-gradient(to right, #fefcea, #f1da36);
-    }
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
 
-    .container {
-        max-width: 1200px;
-        margin: 40px auto;
-        padding: 30px;
-        background-color: rgba(255, 255, 255, 0.95);
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        text-align: center;
-    }
+h1 {
+    color: #c0392b;
+    margin-bottom: 20px;
+}
 
-    h1 {
-        color: #c0392b;
-        margin-bottom: 20px;
-    }
+.TCN {
+    font-size: 22px;
+    font-weight: bold;
+    color: azure;
+    margin-bottom: 20px;
+}
 
-    .TCN {
-        font-size: 22px;
-        font-weight: bold;
-        color: #2980b9;
-        margin-bottom: 20px;
-    }
+.cacquyen {
+    display: inline-block;
+    background-color: #16a085;
+    color: white;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
 
-    .cacquyen {
-        display: inline-block;
-        background-color: #16a085;
-        color: white;
-        padding: 12px 20px;
-        margin: 10px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-    }
-
-    .cacquyen:hover {
-        background-color: #117864;
-    }
-
-    /* Menu fix: đảm bảo khớp chiều rộng với phần container */
-    .header .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 10px 20px;
-    }
-
-    .logoheader img {
-        height: 50px;
-    }
-
-    .chucnang ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .chucnang a {
-        text-decoration: none;
-        color: #2c3e50;
-        font-weight: bold;
-    }
-
-    .chucnang a:hover {
-        color: #e74c3c;
-    }
-
-    .headertop {
-        background: #2980b9;
-        color: white;
-        text-align: center;
-        padding: 8px 0;
-        font-size: 14px;
-    }
-
-    .headermain {
-        background: #ecf0f1;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .menu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.cacquyen:hover {
+    background-color: #117864;
+}

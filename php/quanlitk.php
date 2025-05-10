@@ -131,9 +131,9 @@ $result = $conn->query($sql);
             <?php while ($row = $result->fetch_assoc()) { ?>
             <tr>
                 <td><?php echo $row['id']; ?></td>
-                <td><?php echo $row['ten']; ?></td>
+                <td><?php echo $row['username']; ?></td>
                 <td><?php echo $row['email']; ?></td>
-                <td><?php echo $row['mk']; ?></td>
+                <td><?php echo $row['password']; ?></td>
                 <td>
                     <a href="?delete_id=<?php echo $row['id']; ?>" class="btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa tài khoản này?');">Xóa</a>
                 </td>

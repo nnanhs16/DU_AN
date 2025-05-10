@@ -11,35 +11,10 @@ session_start();
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/admin.css">
-	<link rel="stylesheet" href="../css/menu.css">
-
-		
+    <link rel="stylesheet" href="../css/admin.css">	
 </head>
 <body>
-	<header class="header">
-    <div class="headertop"> xinchaoquykhach</div>
-    <div class="headermain">
-        <div class="container">
-            <div class="menu">
-                <div class="logoheader">
-                    <a href="/">
-                        <img src="../image/logo.png" alt="logo">
-                    </a>
-                </div>
-                <div class="chucnang">
-                    <ul>
-                        <li><a href="trangchu.php">Trang chủ</a></li>
-                        <li><a href="truyenthong.php">Truyền Thông</a></li>
-                        <li><a href="sp.php">Cửa Hàng</a></li>
-                        <li><a href="giohang.php">Giỏ Hàng</a></li>
-                        <li><a href="dangxuat.php">Đăng Xuất</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+	
     <div class="container">
         <h1>Chào mừng đến với trang <?php echo $_SESSION['username']; ?>!</h1>
         <div class="TCN">Truy cập nhanh</div>
@@ -47,7 +22,7 @@ session_start();
             <a href="trangchu.php" class="cacquyen">Trang chủ</a>
             <a href="capnhatsp.php" class="cacquyen">Quản Lý Sản phẩm</a>
             <a href="quanlitk.php" class="cacquyen">Quản lý tài khoản</a>
-            <a href="QuanLyDonHang.php" class="cacquyen">Quản lý đơn hàng</a>
+            <a href="quanlidhang.php" class="cacquyen">Quản lý đơn hàng</a>
             <a href="dangxuat.php" class="cacquyen">Đăng xuất</a>
         </div>
     </div>
