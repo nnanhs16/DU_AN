@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/truyenthong.css">
     <link rel="stylesheet" type="text/css" href="../css/menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
  
 </head>
 <body >
@@ -33,9 +34,6 @@
         </div>
     </div>
     </header>
-       
-  
-
         <h1 class="tieu_de"> TRUYỀN THÔNG </h1>
         <div class="tong_quat">
             <div class="head">

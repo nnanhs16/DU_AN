@@ -33,6 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">>
 </head>
 <body>
+    
+
     <header class="header">
         <div class="headertop">Xin chào quý khách</div>
         <div class="headermain">
@@ -78,9 +80,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = "SELECT * FROM products WHERE id = $id";
         $kq = mysqli_query($conn, $sql);
         if ($dong = mysqli_fetch_assoc($kq)) {
-            $ten = $dong['name'];
-            $gia = $dong['price'];
-            $hinhanh = $dong['image'];
+            $ten = $dong['tensp'];
+            $gia = $dong['gia'];
+            $hinhanh = $dong['hinhanh'];
             $thanhtien = $gia * $soluong;
             $tong += $thanhtien;
 

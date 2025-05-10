@@ -91,7 +91,10 @@ hr {
     justify-content: center;
     gap: 15px;
 }
-
+.anhqc .container3 .tieude {
+    /* padding-top: 150px; */ /* Giảm lại */
+    padding-top: 40px;
+}
 .end .social-icons img {
     height: 40px;
     width: 40px;

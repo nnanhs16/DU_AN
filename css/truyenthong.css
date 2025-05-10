@@ -4,6 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 120px; /* cần thiết để tránh nội dung bị header che */
+}
+
 body{
     font-family:'Montserrat', sans-serif;
 }
@@ -19,7 +25,6 @@ body{
 }
 
 .tieu_de{
-    margin-top: 40px;
     text-align: center;
     color:#003d79;
     font-weight: bold;
@@ -95,4 +100,9 @@ align-items: center;     /* canh giữa dọc */
 padding: 10px ;
 margin: 0 30px;
 display: inline block;
+}
+.from{
+    color: #003d79;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
 }
