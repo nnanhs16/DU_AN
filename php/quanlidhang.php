@@ -83,7 +83,6 @@
 
 	<table>
 		<tr>
-			<th>ID</th>
 			<th>Tên Khách Hàng</th>
 			<th>Tên sản Phẩm</th>
 			<th>Số Điện Thoại</th>
@@ -108,7 +107,6 @@
 			if ($ketqua->num_rows > 0) {
 				while ($row = mysqli_fetch_assoc($ketqua)) {
 					echo "<tr>
-						<td>{$row['id']}</td>
 						<td>{$row['hoten']}</td>
 						<td>{$row['tensp']}</td>
 						<td>{$row['sđt']}</td>

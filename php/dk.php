@@ -19,7 +19,7 @@
       	  $email = $_POST['txtEmail'] ; 
       	  require_once("ketnoi.php");
       	  $sql="insert into user(username, password, email)
-      	  					values('$ten','$pass','$email')";
+      	  					values('$user','$pass','$email')";
       	  $kq = mysqli_query($conn,$sql);
       	  if ($kq) {
 			echo "<script>alert('Đăng ký thành công! Vui lòng đăng nhập.');

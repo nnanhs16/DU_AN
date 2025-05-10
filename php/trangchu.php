@@ -50,7 +50,7 @@
             </div>
         </div>
     </div>
-    <div class="section-two">
+    <div class="anhqc">
         <div class="container3">
             <div class="tieude">
                 <p>Các Sản Phẩm Nổi Bật</p>

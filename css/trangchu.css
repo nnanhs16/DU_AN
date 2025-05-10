@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 
-/* ================= Header ================= */
-
-/* ================= Background Banner ================= */
 .anhlon {
     width: 100%;
     background: white;
@@ -25,7 +22,7 @@
 }
 
 /* ================= Section Two ================= */
-.section-two .container3 .tieude {
+.anhqc .container3 .tieude {
     padding-top: 150px;
     color: #003d79;
     font-family: 'Montserrat', sans-serif;
