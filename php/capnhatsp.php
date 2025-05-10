@@ -9,16 +9,16 @@ if (isset($_GET['xoa'])) {
 }
 
 if (isset($_POST['btnThem'])) {
-    $tensp = $_POST['name'];
-    $gia = $_POST['price'];
-    $thongtin = $_POST['description'];
+    $tensp = $_POST['tensp'];
+    $gia = $_POST['gia'];
+    $thongtin = $_POST['ttsp'];
 
    
     $target_dir = "image/";
-    $target_file = $target_dir . basename($_FILES["image"]["name"]);
+    $target_file = $target_dir . basename($_FILES["hinhanh"]["tensp"]);
     move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
-    $conn->query("INSERT INTO products(name, price, image, description) VALUES ('$tensp', '$gia', '$target_file', '$thongtin')");
+    $conn->query("INSERT INTO products(tensp, gia, hinhanh, ttsp) VALUES ('$tensp', '$gia', '$target_file', '$thongtin')");
     header("Location: capnhatsp.php");
     exit;
 }
@@ -26,17 +26,17 @@ if (isset($_POST['btnThem'])) {
 
 if (isset($_POST['btnCapNhat'])) {
     $id = $_POST['id'];
-    $tensp = $_POST['name'];
-    $gia = $_POST['price'];
-    $thongtin = $_POST['description'];
+    $tensp = $_POST['tensp'];
+    $gia = $_POST['gia'];
+    $thongtin = $_POST['ttsp'];
 
  if (!empty($_FILES["image"]["name"])) {
         $target_dir = "image/";
-        $target_file = $target_dir . basename($_FILES["image"]["name"]);
+        $target_file = $target_dir . basename($_FILES["image"]["tensp"]);
         move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
-        $conn->query("UPDATE products SET name='$tensp', price='$gia', image='$target_file', description='$thongtin' WHERE id=$id");
+        $conn->query("UPDATE products SET tensp='$tensp', gia='$gia', hinhanh='$target_file', ttsp='$thongtin' WHERE id=$id");
     } else {
-        $conn->query("UPDATE products SET name='$tensp', price='$gia', description='$thongtin' WHERE id=$id");
+        $conn->query("UPDATE products SET tensp='$tensp', gia='$gia', ttsp='$thongtin' WHERE id=$id");
     }
 
     header("Location: capnhatsp.php");
@@ -112,10 +112,10 @@ if (isset($_POST['btnCapNhat'])) {
             echo "<form method='post' enctype='multipart/form-data'>";
             echo "<tr>";
             /*echo "<td>{$row['id']}<input type='hidden' name='id' value='{$row['id']}'></td>";*/
-            echo "<td><input type='text' name='name' value='{$row['name']}' style='width: 300px; box-sizing: border-box;'></td>";
-            echo "<td><input type='number' name='price' value='{$row['price']}'></td>";
-            echo "<td><img src = '../{$row['image']}' alt='img' width='100' height='100'></td>";
-            echo "<td><input type='text' name='description' value='{$row['description']}'></td>";
+            echo "<td><input type='text' name='tensp' value='{$row['tensp']}' style='width: 300px; box-sizing: border-box;'></td>";
+            echo "<td><input type='number' name='gia' value='{$row['gia']}'></td>";
+            echo "<td><img src = '../{$row['hinhanh']}' alt='img' width='100' height='100'></td>";
+            echo "<td><input type='text' name='ttsp' value='{$row['ttsp']}'></td>";
             echo "<td>
                     <button type='submit' name='btnCapNhat'>Cập nhật</button>
                     <a href='capnhatsp.php?xoa={$row['id']}' onclick='return confirm(\"Xoá sản phẩm này?\")'>Xoá</a>
@@ -129,10 +129,10 @@ if (isset($_POST['btnCapNhat'])) {
     <tr class="add"><td colspan="6">Thêm sản phẩm mới</td></tr>
     <form method="post" enctype="multipart/form-data">
         <tr>
-            <td><input type="text" name="name" placeholder="Tên sản phẩm" required style="width: 200px;"></td>
-            <td><input type="number" name="price" placeholder="Giá" required></td>
-            <td><input type="file" name="image" required></td>
-            <td><input type="text" name="description" placeholder="Thông tin sản phẩm" required style="width: 250px;"></td>
+            <td><input type="text" name="tensp" placeholder="Tên sản phẩm" required style="width: 200px;"></td>
+            <td><input type="number" name="gia" placeholder="Giá" required></td>
+            <td><input type="file" name="hinhanh" required></td>
+            <td><input type="text" name="ttsp" placeholder="Thông tin sản phẩm" required style="width: 250px;"></td>
         </tr>
         <tr>
             <td colspan="6" style="text-align: center;">
