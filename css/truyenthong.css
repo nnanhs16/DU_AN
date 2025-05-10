@@ -4,8 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family: 'Montserrat',sans-serif;
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 120px; /* cần thiết để tránh nội dung bị header che */
 }
 .tieu_de:hover{
     transform: scale(1.1);
@@ -15,8 +16,12 @@ max-width: 1200px; /* chiều rộng tối đa */
 margin: 0 auto;    /* canh giữa */
 padding: 0 40px;
 }
+.tieu_de {
+    /* margin-top: 40px; */ /* Bỏ cái này */
+    padding-top: 40px; /* Thay bằng padding-top nếu cần */
+}
+
 .tieu_de{
-    margin-top: 40px;
     text-align: center;
     color:#003d79;
     font-weight: bold;

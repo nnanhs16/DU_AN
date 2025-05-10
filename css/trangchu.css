@@ -3,7 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 120px; /* cần thiết để tránh nội dung bị header che */
+}
 .anhlon {
     width: 100%;
     background: white;
@@ -89,7 +92,10 @@ hr {
     justify-content: center;
     gap: 15px;
 }
-
+.anhqc .container3 .tieude {
+    /* padding-top: 150px; */ /* Giảm lại */
+    padding-top: 40px;
+}
 .end .social-icons img {
     height: 40px;
     width: 40px;

@@ -32,6 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="../css/giohang.css">
 </head>
 <body>
+    
+
     <header class="header">
         <div class="headertop">Xin chào quý khách</div>
         <div class="headermain">

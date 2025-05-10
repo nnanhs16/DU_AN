@@ -22,11 +22,10 @@ if (!$khachhang) {
 // Nếu nhấn nút xác nhận thanh toán
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnXacNhan'])) {
     $hoten = $khachhang['ten']; // Sửa thành $hoten
-    $sdt = $khachhang['sdt'];
+    $sđt = $khachhang['sdt'];
     $email = $khachhang['email'];
-    $diachi = $khachhang['dc'];
-    $phuongthucthanhtoan = $khachhang['pttt'];
-    $ngaydat = date('Y-m-d');
+    $diachi = $khachhang['diachi'];
+    $thanhtoan = $khachhang['thanhtoan'];
 
     foreach ($_SESSION['giohang'] as $id => $soluong) {
         $result = mysqli_query($conn,"SELECT * FROM products WHERE id = $id");
@@ -83,10 +82,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnXacNhan'])) {
     <div class="thanhtoan">
     <h2>Thông tin khách hàng</h2>
     <p>Họ tên: <?= $khachhang['ten'] ?></p>
-    <p>Điện thoại: <?= $khachhang['sdt'] ?></p>
+    <p>Điện thoại: <?= $khachhang['sđt'] ?></p>
     <p>Email: <?= $khachhang['email'] ?></p>
-    <p>Địa chỉ: <?= $khachhang['dc'] ?>, <?= $khachhang['tt'] ?>, <?= $khachhang['quocgia'] ?>, <?= $khachhang['mbc'] ?></p>
-    <p>Phương thức thanh toán: <?= $khachhang['pttt'] ?></p>
+    <p>Địa chỉ: <?= $khachhang['diachi'] ?></p>
+    <p>Phương thức thanh toán: <?= $khachhang['thanhtoan'] ?></p>
 
     <h2>Chi tiết đơn hàng</h2>
     <?php
