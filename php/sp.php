@@ -7,10 +7,11 @@
     <link rel="stylesheet" type="text/css" href="../css/base.css">
     <link rel="stylesheet" type="text/css" href="../css/sp1.css">
     <link rel="stylesheet" type="text/css" href="../css/menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-    <div class="headertop"> xinchaoquykhach</div>
+    <div class="headertop"> xin chào quý khách</div>
     <div class="headermain">
         <div class="container">
             <div class="menu">

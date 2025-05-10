@@ -23,10 +23,12 @@ if (!$khachhang) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnXacNhan'])) {
     $hoten = $khachhang['ten']; // Sửa thành $hoten
 
+
     $sđt = $khachhang['sđt'];
     $email = $khachhang['email'];
     $diachi = $khachhang['diachi'];
     $thanhtoan = $khachhang['thanhtoan'];
+
 
 
     foreach ($_SESSION['giohang'] as $id => $soluong) {
@@ -57,6 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnXacNhan'])) {
     <link rel="stylesheet" href="../css/thanhtoan.css">
     <link rel="stylesheet" type="text/css" href="../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">

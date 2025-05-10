@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quản Lý Đơn Hàng</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/menu.css"> 
 	<style>
@@ -13,7 +14,7 @@
 			padding: 0;
 		}
 		body {
-			font-family: 'Times New Roman', Times, serif;
+			font-family:'Montserrat', sans-serif;
 			background-image: url('https://i.pinimg.com/736x/8d/95/f0/8d95f0098999bad95645970afc1810d5.jpg');
 			background-size: cover;
 			background-position: center;

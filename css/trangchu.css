@@ -3,9 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+body{
     font-family: 'Montserrat', sans-serif;
-    padding-top: 120px; /* cần thiết để tránh nội dung bị header che */
 }
 .anhlon {
     width: 100%;
