@@ -47,9 +47,9 @@
 
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<div class='product-card'>";
-            echo "<img src='../" . $row['hinhanh'] . "' alt='" . $row['tensp'] . "' class='product-image'>";
-            echo "<h3 class='product-name'>" . $row['tensp'] . "</h3>";
-            echo "<p class='product-price'>" . number_format($row['gia'], 0, ',', '.') . " đ</p>";
+            echo "<img src='../" . $row['image'] . "' alt='" . $row['name'] . "' class='product-image'>";
+            echo "<h3 class='product-name'>" . $row['name'] . "</h3>";
+            echo "<p class='product-price'>" . number_format($row['price'], 0, ',', '.') . " đ</p>";
 
             // Thêm ô nhập số lượng
             echo "<div class='quantity-selector'>";
