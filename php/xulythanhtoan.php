@@ -7,13 +7,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $phone = $_POST['phone'];
     $paymentMethod = $_POST['payment_method'];
 
-    // Kết nối database (điều chỉnh thông tin kết nối của bạn)
+    
     include(__DIR__ . "/ketnoi.php");
     if (!$conn) {
         die("Lỗi kết nối MySQL: " . mysqli_connect_error());
     }
 
-    // Bắt đầu HTML
+ 
     echo "<!DOCTYPE html>";
     echo "<html lang='en'>";
     echo "<head>";
@@ -24,12 +24,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "</head>";
     echo "<body>";
 
-    echo "<div class='container don-hang-thanh-cong'>"; // Thêm class
+    echo "<div class='container don-hang-thanh-cong'>"; 
 
     echo "<h1>Đặt hàng thành công!</h1>";
     echo "<p>Cảm ơn bạn đã mua hàng.</p>";
 
-    echo "<div class='thong-tin-don-hang'>"; // Khung thông tin đơn hàng (tờ giấy)
+    echo "<div class='thong-tin-don-hang'>";
 
     echo "<h2>Thông tin khách hàng</h2>";
     echo "<p><strong>Họ và tên:</strong> " . htmlspecialchars($name) . "</p>";
@@ -70,11 +70,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "</tfoot>";
     echo "</table>";
 
-    echo "</div>"; // End khung thông tin đơn hàng (tờ giấy)
+    echo "</div>"; 
 
     echo "<p><a href='../video/sp.php'>Tiếp tục mua hàng</a></p>";
 
-    echo "</div>"; // End container
+    echo "</div>";
 
     echo "</body>";
     echo "</html>";

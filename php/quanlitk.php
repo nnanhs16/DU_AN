@@ -24,7 +24,6 @@ $result = $conn->query($sql);
     <title>Quản Lý Tài Khoản</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/menu.css"> 
     <style>
         * {
             padding: 0;
@@ -78,7 +77,7 @@ $result = $conn->query($sql);
         .btn-danger {
             padding: 8px 12px;
             color: #fff;
-            background-color: #dc3545;
+            background-color: #003d79;
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -91,6 +90,7 @@ $result = $conn->query($sql);
     </style>
 </head>
 <body>
+<<<<<<< HEAD
 <header class="header">
     <div class="headertop">Xinchaoquykhach</div>
     <div class="headermain">
@@ -114,6 +114,8 @@ $result = $conn->query($sql);
         </div>
     </div>
 </header>
+=======
+>>>>>>> c4a8106a9526e9720ae1b7de5711c87683c8fa06
 
     <h1>Quản Lý Tài Khoản</h1>
     <table>

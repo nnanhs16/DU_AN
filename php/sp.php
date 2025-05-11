@@ -54,7 +54,7 @@
             echo "<h3 class='product-name'>" . $row['tensp'] . "</h3>";
             echo "<p class='product-price'>" . number_format($row['gia'], 0, ',', '.') . " đ</p>";
 
-            // Thêm ô nhập số lượng
+           
             echo "<div class='quantity-selector'>";
             echo "<label for='quantity_" . $row['id'] . "'>Số lượng:</label>";
             echo "<input type='number' id='quantity_" . $row['id'] . "' name='quantity_" . $row['id'] . "' value='1' min='1'>";
@@ -76,7 +76,7 @@
 
             addToCartButtons.forEach(button => {
                 button.addEventListener('click', function() {
-                    console.log('Nút Thêm vào giỏ hàng được nhấp!'); // Dòng này đã được thêm
+                    console.log('Nút Thêm vào giỏ hàng được nhấp!'); 
 
                     const productId = this.dataset.productId;
                     const quantityInput = document.getElementById(`quantity_${productId}`);
