@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family:'Montserrat', sans-serif;
-}
 .Container{
     height: 100vh;
     display: flex;
@@ -22,7 +19,7 @@ body{
 
 }
 .from-contain h2{
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     text-align: center;
     color: #00416A;
 }
@@ -37,7 +34,7 @@ body{
     transition: border 0.3s;
 }
 .from-contain input[type="submit"]{
-    background: #069092;
+    background: #00416A;
     color: whitesmoke;
     border: none;
     padding: 10px;
@@ -57,7 +54,7 @@ font-size: 14px;
 }
 
 .from-contain p a {
-color: #069092;
+color: #00416A;
 text-decoration: none;
 font-weight: bold;
 transition: 0.3s;

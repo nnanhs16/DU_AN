@@ -38,7 +38,7 @@
             transition: border 0.3s;
 		}
 		.from-contain input[type="submit"]{
-			background: #069092;
+			background: #00416A;
 			color: whitesmoke;
 			border: none;
             padding: 10px;
@@ -58,7 +58,7 @@
         }
 
         .from-contain p a {
-        color: #069092;
+        color: #00416A;
         text-decoration: none;
         font-weight: bold;
         transition: 0.3s;
