@@ -2,9 +2,10 @@ h2 {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
+    padding-top: 50px;
 }
 
-/* Khung chứa form */
+
 form {
     background-color: white;
     padding: 30px 40px;
@@ -14,8 +15,6 @@ form {
     margin: 0 auto; /* Căn giữa ngang */
     border: 1px solid #ccc;
 }
-
-/* Nhãn */
 label {
     display: block;
     margin-bottom: 5px;
@@ -23,7 +22,6 @@ label {
     font-weight: bold;
 }
 
-/* Ô nhập liệu và select */
 input[type="text"],
 input[type="email"],
 select {
@@ -35,7 +33,6 @@ select {
     margin-bottom: 15px;
 }
 
-/* Nút submit */
 input[type="submit"] {
     width: 100%;
     background-color: #0056b3;
