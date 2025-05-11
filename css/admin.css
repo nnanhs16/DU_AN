@@ -35,7 +35,7 @@ h1 {
 
 .cacquyen {
     display: inline-block;
-    background-color: #16a085;
+    background-color: #2b6cb5;
     color: white;
     padding: 12px 20px;
     margin: 10px;
@@ -46,5 +46,5 @@ h1 {
 }
 
 .cacquyen:hover {
-    background-color: #117864;
+    background-color: #2b6cb5;
 }

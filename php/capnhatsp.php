@@ -50,48 +50,7 @@ if (isset($_POST['btnCapNhat'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Danh sách sản phẩm</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">>
-	<style type="text/css">
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    table {
-      width: 90%;
-      margin: 20px auto;
-      border-collapse: collapse;
-      background: #fff;
-    }
-
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: left;
-    }
-
-    th {
-      background-color: #f2f2f2;
-    }
-
-    .head {
-      color: #ccc;
-      height: 30px;
-      text-align: center;
-      line-height: 40px;
-      margin-bottom: 10px;
-      font-weight: bold;
-      font-size: 18px;
-      background-color: #003d79;
-    }
-    .add {
-      line-height: 40px;
-      color: #ccc;
-      background-color: #003d79;
-      height: 40px;
-      text-align: justify;
-      font-size: 18px;
-    }
-  </style>
+	 <link rel="stylesheet" href="../css/capnhatsp.css">
 </head>
 <body>
 	<div class="container">

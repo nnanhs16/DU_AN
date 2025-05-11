@@ -45,14 +45,16 @@
 		}
 		button {
 			padding: 6px 10px;
-			background-color: lightseagreen;
+			background-color: #487cbf;
+			
 			color: white;
 			border: none;
 			border-radius: 5px;
 			cursor: pointer;
 		}
 		button:hover {
-			background-color: darkcyan;
+			background-color: #003d79;
+			
 		}
 	</style>
 </head>
