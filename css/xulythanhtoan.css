@@ -1,6 +1,4 @@
-/* ... Các style trước đó ... */
 
-/* Style cho trang Đặt hàng thành công (tờ giấy) */
 .don-hang-thanh-cong {
     width: 70%;
     max-width: 800px;
@@ -10,17 +8,17 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: 'Montserrat', sans-serif;
-    background-color: #fff; /* Màu nền trắng của giấy */
+    background-color: #fff; 
 }
 
-/* Style cho khung thông tin khách hàng */
+
 .thong-tin-khach-hang {
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
 
-/* Style cho khung thông tin sản phẩm */
+
 .thong-tin-san-pham {
     margin-top: 10px;
 }
@@ -47,4 +45,3 @@
     height: auto;
 }
 
-/* ... Các style khác ... */

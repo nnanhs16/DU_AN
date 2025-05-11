@@ -4,9 +4,8 @@ $username = "root";
 $password = ""; 
 $dbname = "ttsp"; 
 
-// Tạo kết nối
-$conn = mysqli_connect($servername, $username, $password, $dbname, 4306) or die("kết nối CSDL thất bại");
 
-// Kiểm tra kết nối
+$conn = mysqli_connect($servername, $username, $password, $dbname) or die("kết nối CSDL thất bại");
+
 mysqli_set_charset ($conn,"utf8");
 ?>

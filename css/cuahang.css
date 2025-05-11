@@ -16,8 +16,8 @@ padding: 40px;
 
 .dau {
     display: flex;
-    flex-wrap: wrap; /* Cho phép các sản phẩm xuống hàng khi không đủ chỗ */
-    justify-content: center; /* Căn giữa các sản phẩm trên hàng */
+    flex-wrap: wrap; 
+    justify-content: center; 
     gap: 30px;
 }
 
@@ -25,8 +25,8 @@ padding: 40px;
     border: 2px solid #003d79;
     border-radius: 30px;
     background-color: #fff;
-    width: 300px; /* Giữ nguyên chiều rộng hoặc điều chỉnh */
-    margin-bottom: 30px; /* Thêm margin bottom để tạo khoảng cách giữa các hàng */
+    width: 300px; 
+    margin-bottom: 30px; 
     overflow: hidden;
     box-shadow: 0 4px 10px black;
     text-align: center;
@@ -80,5 +80,5 @@ transition: 0.3s
 
 .ket button:hover {
 background-color: #001f66;
-/* opacity: 0.5; */
+
 }

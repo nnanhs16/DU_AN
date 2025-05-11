@@ -52,19 +52,19 @@
 			opacity: 0.5;
 		}
         .from-contain p {
-        text-align: center;
-        margin-top: 15px;
-        font-size: 14px;
+			text-align: center;
+			margin-top: 15px;
+			font-size: 14px;
         }
 
         .from-contain p a {
-        color: #069092;
-        text-decoration: none;
-        font-weight: bold;
-        transition: 0.3s;
+			color: #069092;
+			text-decoration: none;
+			font-weight: bold;
+			transition: 0.3s;
         }
 
         .from-contain p a:hover {
-        color: #00416A;
-        text-decoration: underline;
+			color: #00416A;
+			text-decoration: underline;
         }

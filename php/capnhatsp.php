@@ -106,13 +106,12 @@ if (isset($_POST['btnCapNhat'])) {
 	      <th>Thông tin</th>
 	      <th>Thao tác</th>
 	    </tr>
-    <!-- Bạn sẽ chèn các hàng dữ liệu bằng PHP ở đây -->
+    
 	<?php
         $result = $conn->query("SELECT * FROM products");
         while ($row = $result->fetch_assoc()) {
             echo "<form method='post' enctype='multipart/form-data'>";
             echo "<tr>";
-            /*echo "<td>{$row['id']}<input type='hidden' name='id' value='{$row['id']}'></td>";*/
             echo "<td><input type='text' name='tensp' value='{$row['tensp']}' style='width: 300px; box-sizing: border-box;'></td>";
             echo "<td><input type='number' name='gia' value='{$row['gia']}'></td>";
             echo "<td><img src = '../{$row['hinhanh']}' alt='img' width='100' height='100'></td>";

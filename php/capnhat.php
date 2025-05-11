@@ -9,7 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_cart'])) {
             if ($quantity > 0) {
                 $_SESSION['cart'][$productId] = $quantity;
             } else {
-                // Nếu số lượng là 0 hoặc âm, xóa sản phẩm khỏi giỏ hàng
                 unset($_SESSION['cart'][$productId]);
             }
         }

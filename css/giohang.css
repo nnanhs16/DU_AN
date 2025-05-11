@@ -55,22 +55,22 @@
             margin: 30px 0;
         }
         .btn-checkout {
-        margin-left: 85px;
-        background-color: #003d79; 
-        color: white; 
-        padding: 12px 24px; 
-        border: none; 
-        border-radius: 8px; 
-        cursor: pointer; 
-        font-size: 18px; 
-        font-weight: bold; 
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            margin-left: 85px;
+            background-color: #003d79; 
+            color: white; 
+            padding: 12px 24px; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-size: 18px; 
+            font-weight: bold; 
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
         }
 
         .btn-checkout:hover {
-        background-color: #003d79; /* Màu xanh đậm khi hover */
-        transform: translateY(-3px); /* Di chuyển nhẹ lên khi hover */
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bóng đổ đậm hơn */
-    }
+            background-color: #003d79; 
+            transform: translateY(-3px); 
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
 

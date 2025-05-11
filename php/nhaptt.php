@@ -10,24 +10,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $thanhtoan = $_POST['thanhtoan'];
     
 
-    // 1. Lưu thông tin khách hàng vào database
+    
     $sql_insert_khachhang = "INSERT INTO khachhang (ten, sđt, email, diachi, thanhtoan)
                                   VALUES ('$ten', '$sđt', '$email', '$diachi', '$thanhtoan')";
 
     if (mysqli_query($conn, $sql_insert_khachhang)) {
-        $khachhang_id = mysqli_insert_id($conn); // Lấy ID vừa tạo
+        $khachhang_id = mysqli_insert_id($conn); 
 
-        // 2. Lưu ID khách hàng vào session
+        
         $_SESSION['khachhang_id'] = $khachhang_id;
 
-        // 3. Chuyển hướng trở lại thanhtoan.php
+        
         header("Location: thanhtoan.php");
         exit;
     } else {
         echo "Lỗi: " . mysqli_error($conn);
-        // Có thể thêm log hoặc thông báo khác
+       
     }
-} // <--- Đã thêm dấu ngoặc nhọn đóng cho khối lệnh if
+} 
 ?>
         <link rel="stylesheet" href="../css/nhaptt.css">
         <link rel="stylesheet" href="../css/menu.css">
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <header class="header">
-    <div class="headertop">Xin chào quý khách</div>
+    <div class="headertop">xinchaoquykhach</div>
     <div class="headermain">
         <div class="container">
             <div class="menu">
