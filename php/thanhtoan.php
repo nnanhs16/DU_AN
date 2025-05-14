@@ -2,7 +2,6 @@
 session_start();
 require_once("ketnoi.php");
 
-// Kiểm tra session
 if (!isset($_SESSION['khachhang_id']) || !isset($_SESSION['giohang']) || empty($_SESSION['giohang'])) {
     echo "Thông tin không đầy đủ. Vui lòng quay lại giỏ hàng.";
     exit;
@@ -13,15 +12,13 @@ $query_kh = "SELECT * FROM khachhang WHERE id = $khachhang_id";
 $result_kh = mysqli_query($conn, $query_kh);
 $khachhang = mysqli_fetch_assoc($result_kh);
 
-// Nếu không tìm thấy thông tin khách hàng
 if (!$khachhang) {
     header("location:nhaptt.php");
     exit;
 }
 
-// Nếu nhấn nút xác nhận thanh toán
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnXacNhan'])) {
-    $hoten = $khachhang['ten']; // Sửa thành $hoten
+    $hoten = $khachhang['ten']; 
 
 
     $sđt = $khachhang['sđt'];
@@ -34,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnXacNhan'])) {
     foreach ($_SESSION['giohang'] as $id => $soluong) {
         $result = mysqli_query($conn,"SELECT * FROM products WHERE id = $id");
         if ($row = mysqli_fetch_assoc($result)) {
-            $tensp = $row['tensp']; // Lấy tên sản phẩm vào $sp
+            $tensp = $row['tensp']; 
             $gia = $row['gia'];
          
      $sql_insert = "INSERT INTO quanlidonhang (hoten, tensp, sđt, soluongdat, thanhtoan, email, diachi, gia)
@@ -43,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnXacNhan'])) {
         }
     }
 
-    // Xóa giỏ hàng sau khi đặt
+    
     unset($_SESSION['giohang']);
 
     echo "<script>alert('Đơn hàng đã được đặt thành công!'); window.location.href='trangchu.php';</script>";
