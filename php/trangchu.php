@@ -16,7 +16,7 @@
 <body>
 
 <header class="header">
-    <div class="headertop">Xin chào quý khách</div>
+    <div class="headertop">xinchaoquykhach</div>
     <div class="headermain">
         <div class="container">
             <div class="menu">

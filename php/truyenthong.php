@@ -13,7 +13,7 @@
 <body >
 
     <header class="header">
-    <div class="headertop">Xin chào quý khách</div>
+    <div class="headertop">xinchaoquykhach</div>
     <div class="headermain">
         <div class="container">
             <div class="menu">
@@ -84,7 +84,7 @@
             <hr style="border: 1px solid #ccc; margin: 30px 0;">
             <div class="footer">
                 <div class="logo">
-                <a href="index.html">
+                <a href="trangchu.php">
                     <img src="../image/logo.png" alt="logo" width="100px" >
                 </a>
                 </div>

@@ -90,33 +90,6 @@ $result = $conn->query($sql);
     </style>
 </head>
 <body>
-<<<<<<< HEAD
-<header class="header">
-    <div class="headertop">Xinchaoquykhach</div>
-    <div class="headermain">
-        <div class="container">
-            <div class="menu">
-                <div class="logoheader">
-                    <a href="/">
-                        <img src="../image/logo.png" alt="logo">
-                    </a>
-                </div>
-                <div class="chucnang">
-                    <ul>
-                        <li><a href="trangchu.php">Trang chủ</a></li>
-                        <li><a href="truyenthong.php">Truyền Thông</a></li>
-                        <li><a href="sp.php">Cửa Hàng</a></li>
-                        <li><a href="giohang.php">Giỏ Hàng</a></li>
-                        <li><a href="dangxuat.php">Đăng Xuất</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-=======
->>>>>>> c4a8106a9526e9720ae1b7de5711c87683c8fa06
-
     <h1>Quản Lý Tài Khoản</h1>
     <table>
         <thead>
